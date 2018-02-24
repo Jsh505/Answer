@@ -1,0 +1,80 @@
+//
+//  Answer_PrefixHeader.pch
+//  答题软件
+//
+//  Created by 贾仕海 on 2018/2/13.
+//  Copyright © 2018年 jsh. All rights reserved.
+//
+
+#ifndef Answer_PrefixHeader_pch
+#define Answer_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion ([[UIDevice currentDevice] systemVersion])
+#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(__stderrp,"%s %s:%d\t%s\t%s\n",__TIME__,[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __FUNCTION__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...)
+#endif
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+
+// 不堵塞线程并在主线程的延迟执行 timer:延迟时间，单位：秒；与主线程同步
+#define GCDMainDelay(timer,block) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, INT64_C(timer) * NSEC_PER_SEC), dispatch_get_main_queue(), block)
+
+// 将code调到主线程执行，与主线程同步
+#define GCDMain(block) dispatch_async(dispatch_get_main_queue(), block)
+
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults] // 获取 NSUserDefaults  对象
+#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]] // 传入图片名称,获取UIImage
+
+/** 弱引用*/
+#define kWeakSelf(type)   __weak typeof(type) weak##type = type;
+/** 强引用*/
+#define kStrongSelf(type) __strong typeof(type) type = weak##type;
+
+#define Default_Person_Image [UIImage imageNamed:@"默认头像"]
+#define Default_NoData_Image [UIImage imageNamed:@"暂无数据"]
+#define Default_General_Image [UIImage imageNamed:@"占位图"]
+
+//适配高度
+#define JSH_IsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define JSH_StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define JSH_NavBarHeight 44.0
+#define JSH_NavbarAndStatusBarHeight (JSH_StatusBarHeight + JSH_NavBarHeight)
+#define JSH_TabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define JSH_SafeBottomMargin   ([[UIApplication sharedApplication] statusBarFrame].size.height>20 ? 34.f : 0.f)
+
+//测试环境
+#define APIEHEAD @"http://39.106.219.133"  //网络请求头
+#define IMAGEHEAD @"http://p4k36yzp3.bkt.clouddn.com"  //图片头
+#define VIDEOHEAD @"http://118.190.205.196/swvideo/" //视频头
+//正式环境
+//#define APIEHEAD @"http://icd.langyadt.com/api.php/"  //网络请求头
+//#define IMAGEHEAD @"http://icd.langyadt.com/"  //图片头
+
+//搜索历史
+#define KHistorySearchPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"PYSearchhistories.plist"]
+#define KColor(r,g,b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
+
+//配置常量
+
+#define WXDoctor_App_ID @"wxd1931d4a0e462***"  // 注册微信时的AppID
+#import "AppDelegate.h"
+#import "ToolHeader.h"
+#import "MBProgressHUD+JDragon.h"
+#import "UserSignData.h"
+#import "PPNetworkHelper.h"
+#import "UIBarButtonItem+Extension.h"
+
+#endif /* Answer_PrefixHeader_pch */

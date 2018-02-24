@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackVC">
+            <connections>
+                <outlet property="infoTextView" destination="gyX-Mr-TIB" id="SZr-g2-ph2"/>
+                <outlet property="photoButton" destination="iLc-Qs-28v" id="fzf-BO-243"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gyX-Mr-TIB">
+                    <rect key="frame" x="20" y="80" width="280" height="110"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gyX-Mr-TIB" secondAttribute="height" multiplier="560:220" id="Uf9-KE-BQo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLc-Qs-28v">
+                    <rect key="frame" x="200" y="210" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="8JC-pp-wvg"/>
+                        <constraint firstAttribute="width" secondItem="iLc-Qs-28v" secondAttribute="height" id="x9N-Yz-tcj"/>
+                    </constraints>
+                    <state key="normal" image="我的反馈拍照"/>
+                    <connections>
+                        <action selector="photoButtonClicked:" destination="-1" eventType="touchUpInside" id="QNy-h6-Kxr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDN-8L-4kw">
+                    <rect key="frame" x="219.5" y="310" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gyX-Mr-TIB" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="0Np-tA-N63"/>
+                <constraint firstItem="iLc-Qs-28v" firstAttribute="top" secondItem="gyX-Mr-TIB" secondAttribute="bottom" constant="20" id="BPY-ZV-vAh"/>
+                <constraint firstItem="bDN-8L-4kw" firstAttribute="top" secondItem="iLc-Qs-28v" secondAttribute="bottom" id="MCd-8b-uhY"/>
+                <constraint firstItem="iLc-Qs-28v" firstAttribute="trailing" secondItem="gyX-Mr-TIB" secondAttribute="trailing" id="NjE-HR-FtJ"/>
+                <constraint firstItem="bDN-8L-4kw" firstAttribute="centerX" secondItem="iLc-Qs-28v" secondAttribute="centerX" id="WxD-yh-63Y"/>
+                <constraint firstItem="gyX-Mr-TIB" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="iko-sI-NXS"/>
+                <constraint firstItem="gyX-Mr-TIB" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="pTZ-IF-FTc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="我的反馈拍照" width="77" height="77"/>
+    </resources>
+</document>

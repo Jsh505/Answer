@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页钻石" translatesAutoresizingMaskIntoConstraints="NO" id="13W-cl-OIq">
+                    <rect key="frame" x="10" y="15.5" width="13" height="13"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精选考题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1w-Cp-o9B">
+                    <rect key="frame" x="28" y="13" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsV-wc-YRh">
+                    <rect key="frame" x="298.5" y="14" width="53.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="列表右键" translatesAutoresizingMaskIntoConstraints="NO" id="oJS-XE-P0O">
+                    <rect key="frame" x="352" y="15" width="13" height="13"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i1w-Cp-o9B" firstAttribute="leading" secondItem="13W-cl-OIq" secondAttribute="trailing" constant="5" id="Gn0-2w-7LV"/>
+                <constraint firstItem="oJS-XE-P0O" firstAttribute="leading" secondItem="xsV-wc-YRh" secondAttribute="trailing" id="IdO-Rf-wbq"/>
+                <constraint firstItem="i1w-Cp-o9B" firstAttribute="centerY" secondItem="13W-cl-OIq" secondAttribute="centerY" id="RVu-ZL-wiO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oJS-XE-P0O" secondAttribute="trailing" constant="10" id="YCm-UF-ErF"/>
+                <constraint firstItem="13W-cl-OIq" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="bpO-og-48O"/>
+                <constraint firstItem="oJS-XE-P0O" firstAttribute="centerY" secondItem="i1w-Cp-o9B" secondAttribute="centerY" id="br9-Of-s3F"/>
+                <constraint firstItem="xsV-wc-YRh" firstAttribute="centerY" secondItem="oJS-XE-P0O" secondAttribute="centerY" id="imw-tz-w6C"/>
+                <constraint firstItem="13W-cl-OIq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zqu-or-ONv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="列表右键" width="13" height="13"/>
+        <image name="首页钻石" width="13" height="13"/>
+    </resources>
+</document>
