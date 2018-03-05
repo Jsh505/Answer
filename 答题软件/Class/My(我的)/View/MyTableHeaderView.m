@@ -18,4 +18,11 @@
 }
 */
 
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+    
+    self.userImageView.layer.masksToBounds = YES;
+    self.userImageView.layer.cornerRadius = self.userImageView.frame.size.height / 2;
+}
+
 @end

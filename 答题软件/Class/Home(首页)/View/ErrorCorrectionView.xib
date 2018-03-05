@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ErrorCorrectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68X-kg-jfh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITb-d0-lfN">
+                    <rect key="frame" x="30" y="183.5" width="315" height="320"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mx-p4-SCJ">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="试题纠错" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD8-mt-jHp">
+                                    <rect key="frame" x="127" y="16" width="61.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybs-U7-IXZ">
+                                    <rect key="frame" x="265" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="gWu-bK-wDV"/>
+                                        <constraint firstAttribute="height" constant="50" id="s5H-Um-4wj"/>
+                                    </constraints>
+                                    <state key="normal" image="纠错关闭"/>
+                                    <connections>
+                                        <action selector="canelButtonCilick:" destination="iN0-l3-epB" eventType="touchUpInside" id="QrX-Tz-45Q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.23529411759999999" green="0.51372549020000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="KD8-mt-jHp" firstAttribute="centerX" secondItem="9mx-p4-SCJ" secondAttribute="centerX" id="QEw-VU-K5b"/>
+                                <constraint firstItem="ybs-U7-IXZ" firstAttribute="top" secondItem="9mx-p4-SCJ" secondAttribute="top" id="S7k-oc-W5h"/>
+                                <constraint firstAttribute="height" constant="50" id="azn-8A-7sX"/>
+                                <constraint firstItem="KD8-mt-jHp" firstAttribute="centerY" secondItem="9mx-p4-SCJ" secondAttribute="centerY" id="lRZ-wI-nQf"/>
+                                <constraint firstAttribute="trailing" secondItem="ybs-U7-IXZ" secondAttribute="trailing" id="zeB-Vt-urA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FL2-oJ-XrQ">
+                            <rect key="frame" x="10" y="60" width="295" height="70"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wlu-wg-r2x">
+                                    <rect key="frame" x="5" y="5" width="285" height="60"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-Ua-z5g">
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZM-vA-SFd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="题目不完整" image="圈未选">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected" image="圈已选"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sV0-mN-fMK">
+                                                    <rect key="frame" x="95" y="0.0" width="95" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="图片不存在" image="圈未选">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected" image="圈已选"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKh-xX-Qm6">
+                                                    <rect key="frame" x="190" y="0.0" width="95" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="答案不正确" image="圈未选">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected" image="圈已选"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sKh-xX-Qm6" firstAttribute="width" secondItem="sV0-mN-fMK" secondAttribute="width" id="ULk-tz-mxH"/>
+                                                <constraint firstItem="sV0-mN-fMK" firstAttribute="height" secondItem="BZM-vA-SFd" secondAttribute="height" id="aUq-gT-4a5"/>
+                                                <constraint firstItem="sV0-mN-fMK" firstAttribute="width" secondItem="BZM-vA-SFd" secondAttribute="width" id="ucX-8V-3km"/>
+                                                <constraint firstItem="sKh-xX-Qm6" firstAttribute="height" secondItem="sV0-mN-fMK" secondAttribute="height" id="wri-sN-X5E"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-En-bZv">
+                                            <rect key="frame" x="0.0" y="30" width="285" height="30"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqP-GD-v6l">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="含有错别字" image="圈未选">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected" image="圈已选"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-yo-42i">
+                                                    <rect key="frame" x="95" y="0.0" width="95" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="解析不完整" image="圈未选">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected" image="圈已选"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-bg-RaQ">
+                                                    <rect key="frame" x="190" y="0.0" width="95" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="其他问题" image="圈未选">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected" image="圈已选"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ugs-yo-42i" firstAttribute="width" secondItem="KqP-GD-v6l" secondAttribute="width" id="1JI-Ft-oPU"/>
+                                                <constraint firstItem="eVu-bg-RaQ" firstAttribute="width" secondItem="ugs-yo-42i" secondAttribute="width" id="Af5-Ga-NNh"/>
+                                                <constraint firstItem="ugs-yo-42i" firstAttribute="height" secondItem="KqP-GD-v6l" secondAttribute="height" id="bdk-ug-tv7"/>
+                                                <constraint firstItem="eVu-bg-RaQ" firstAttribute="height" secondItem="ugs-yo-42i" secondAttribute="height" id="fyY-Ac-QXk"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="7EL-ME-eQN"/>
+                                        <constraint firstItem="3RY-En-bZv" firstAttribute="width" secondItem="qEx-Ua-z5g" secondAttribute="width" id="DYu-O4-Gy2"/>
+                                        <constraint firstItem="3RY-En-bZv" firstAttribute="height" secondItem="qEx-Ua-z5g" secondAttribute="height" id="k2S-12-rE5"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="wlu-wg-r2x" secondAttribute="bottom" constant="5" id="0hp-u9-J2x"/>
+                                <constraint firstItem="wlu-wg-r2x" firstAttribute="top" secondItem="FL2-oJ-XrQ" secondAttribute="top" constant="5" id="DUh-ix-X2l"/>
+                                <constraint firstAttribute="trailing" secondItem="wlu-wg-r2x" secondAttribute="trailing" constant="5" id="Y87-Om-pwI"/>
+                                <constraint firstItem="wlu-wg-r2x" firstAttribute="leading" secondItem="FL2-oJ-XrQ" secondAttribute="leading" constant="5" id="gJx-X9-Rte"/>
+                                <constraint firstAttribute="height" constant="70" id="pD1-GI-s9w"/>
+                            </constraints>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="54P-g0-Olb">
+                            <rect key="frame" x="10" y="145" width="295" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="iDw-N3-m2w"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w72-JS-WOl">
+                            <rect key="frame" x="240" y="282" width="60" height="30"/>
+                            <color key="backgroundColor" red="0.23529411759999999" green="0.51372549020000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="OYl-i9-ieD"/>
+                                <constraint firstAttribute="height" constant="30" id="dzg-0v-MlE"/>
+                            </constraints>
+                            <state key="normal" title="提交">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sendLabelButtonCilick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0h5-Dj-dJt"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="FL2-oJ-XrQ" firstAttribute="top" secondItem="9mx-p4-SCJ" secondAttribute="bottom" constant="10" id="3Qj-OZ-yny"/>
+                        <constraint firstItem="54P-g0-Olb" firstAttribute="leading" secondItem="ITb-d0-lfN" secondAttribute="leading" constant="10" id="5U3-Eu-CHo"/>
+                        <constraint firstItem="54P-g0-Olb" firstAttribute="top" secondItem="FL2-oJ-XrQ" secondAttribute="bottom" constant="15" id="I4n-0B-72l"/>
+                        <constraint firstAttribute="height" constant="320" id="LjI-n4-uJ8"/>
+                        <constraint firstAttribute="trailing" secondItem="9mx-p4-SCJ" secondAttribute="trailing" id="Prl-bJ-8AY"/>
+                        <constraint firstItem="9mx-p4-SCJ" firstAttribute="leading" secondItem="ITb-d0-lfN" secondAttribute="leading" id="QS6-lT-Gfi"/>
+                        <constraint firstItem="w72-JS-WOl" firstAttribute="top" secondItem="54P-g0-Olb" secondAttribute="bottom" constant="9" id="X9G-cX-Bx5"/>
+                        <constraint firstAttribute="trailing" secondItem="54P-g0-Olb" secondAttribute="trailing" constant="10" id="YiN-bQ-cKm"/>
+                        <constraint firstItem="FL2-oJ-XrQ" firstAttribute="leading" secondItem="ITb-d0-lfN" secondAttribute="leading" constant="10" id="Zgr-t9-Szh"/>
+                        <constraint firstAttribute="trailing" secondItem="w72-JS-WOl" secondAttribute="trailing" constant="15" id="ftM-z7-ZHZ"/>
+                        <constraint firstAttribute="trailing" secondItem="FL2-oJ-XrQ" secondAttribute="trailing" constant="10" id="jZ0-wc-g2r"/>
+                        <constraint firstItem="9mx-p4-SCJ" firstAttribute="top" secondItem="ITb-d0-lfN" secondAttribute="top" id="oqX-bM-9f3"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ITb-d0-lfN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="5Rw-T1-6T9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="68X-kg-jfh" secondAttribute="trailing" id="Iyx-Ok-7Sy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="68X-kg-jfh" secondAttribute="bottom" id="P9V-Ks-dmg"/>
+                <constraint firstItem="68X-kg-jfh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WnY-GT-heL"/>
+                <constraint firstItem="ITb-d0-lfN" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Xve-9o-OkA"/>
+                <constraint firstItem="ITb-d0-lfN" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="vBP-Tx-FFQ"/>
+                <constraint firstItem="68X-kg-jfh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zgr-q1-h6Y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="contentView" destination="ITb-d0-lfN" id="Fpl-rv-toq"/>
+                <outlet property="infoTextView" destination="54P-g0-Olb" id="mkr-yT-UjP"/>
+                <outlet property="masView" destination="68X-kg-jfh" id="xp2-8h-xEz"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="圈已选" width="16" height="16"/>
+        <image name="圈未选" width="16" height="16"/>
+        <image name="纠错关闭" width="24" height="24"/>
+    </resources>
+</document>

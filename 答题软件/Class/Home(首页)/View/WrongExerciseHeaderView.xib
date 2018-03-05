@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3Hb-5S-qLp" customClass="WrongExerciseHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="列表加号" translatesAutoresizingMaskIntoConstraints="NO" id="coo-7B-Xht">
+                    <rect key="frame" x="336" y="23" width="24" height="24"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题标题标题标题标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb6-hH-Nsj">
+                    <rect key="frame" x="15" y="15" width="153" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="错题：21道" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWT-Wz-br3">
+                    <rect key="frame" x="15" y="38" width="62" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-3l-EtU">
+                    <rect key="frame" x="0.0" y="62" width="375" height="8"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="nf2-rw-B4l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VhN-mS-pyf" firstAttribute="trailing" secondItem="bg2-3l-EtU" secondAttribute="trailing" id="BA4-uP-3dp"/>
+                <constraint firstAttribute="bottom" secondItem="bg2-3l-EtU" secondAttribute="bottom" id="FD2-6t-5ho"/>
+                <constraint firstItem="coo-7B-Xht" firstAttribute="centerY" secondItem="VhN-mS-pyf" secondAttribute="centerY" id="I7n-Kg-JrA"/>
+                <constraint firstItem="lb6-hH-Nsj" firstAttribute="leading" secondItem="3Hb-5S-qLp" secondAttribute="leading" constant="15" id="Sa5-jm-PyD"/>
+                <constraint firstItem="TWT-Wz-br3" firstAttribute="leading" secondItem="lb6-hH-Nsj" secondAttribute="leading" id="TaB-VR-3Ge"/>
+                <constraint firstItem="bg2-3l-EtU" firstAttribute="leading" secondItem="VhN-mS-pyf" secondAttribute="leading" id="Zdg-ao-V3X"/>
+                <constraint firstItem="TWT-Wz-br3" firstAttribute="top" secondItem="lb6-hH-Nsj" secondAttribute="bottom" constant="5" id="als-jI-K8W"/>
+                <constraint firstItem="lb6-hH-Nsj" firstAttribute="top" secondItem="VhN-mS-pyf" secondAttribute="top" constant="15" id="fmQ-fd-F91"/>
+                <constraint firstItem="VhN-mS-pyf" firstAttribute="trailing" secondItem="coo-7B-Xht" secondAttribute="trailing" constant="15" id="x42-j3-jRa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="VhN-mS-pyf"/>
+            <connections>
+                <outlet property="personNumLB" destination="TWT-Wz-br3" id="ajW-Q1-1ed"/>
+                <outlet property="titleLB" destination="lb6-hH-Nsj" id="qlO-er-3Ae"/>
+                <outlet property="typeImageView" destination="coo-7B-Xht" id="3Fa-8s-COt"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="-251"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="列表加号" width="24" height="24"/>
+    </resources>
+</document>

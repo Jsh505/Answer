@@ -21,8 +21,8 @@
 {
     [super viewDidLoad];
 
-    self.coustromTableView.emptyDataSetSource = self;
-    self.coustromTableView.emptyDataSetDelegate = self;
+//    self.coustromTableView.emptyDataSetSource = self;
+//    self.coustromTableView.emptyDataSetDelegate = self;
 }
 
 #pragma mark -- UITableView

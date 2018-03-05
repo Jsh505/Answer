@@ -14,6 +14,7 @@ pod 'MJRefresh', '~> 3.1.12'
 pod 'SDWebImage', '~> 4.2.2'
 pod 'YYCache', '~> 1.0.4'
 pod 'IQKeyboardManager', '~> 4.0.8'
+pod 'SDAutoLayout', '~> 2.1.3'
 #搜索
 pod 'PYSearch', '~> 0.8.8'	
 #轮播	

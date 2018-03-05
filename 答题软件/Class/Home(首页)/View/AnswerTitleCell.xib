@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerTitleCellident" rowHeight="107" id="KGk-i7-Jjw" customClass="AnswerTitleCell">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="选题标题" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-1H-YyD">
+                        <rect key="frame" x="15" y="10" width="27" height="27"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多选题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9c-Zh-kKG">
+                        <rect key="frame" x="45" y="13" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPc-99-d67">
+                        <rect key="frame" x="284" y="13" width="8" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCL-o1-WFb">
+                        <rect key="frame" x="292" y="16" width="21" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-9c-FGm">
+                        <rect key="frame" x="0.0" y="45" width="328" height="1"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="pTX-sR-nDq"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="题目内容题目内容题目内容题目内容题目内容题目内容题目内容（    ）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUJ-hv-qet">
+                        <rect key="frame" x="15" y="53" width="298" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tUJ-hv-qet" secondAttribute="bottom" constant="10" id="8OZ-Wl-5P9"/>
+                    <constraint firstItem="jCL-o1-WFb" firstAttribute="leading" secondItem="nPc-99-d67" secondAttribute="trailing" id="Agn-ao-ks7"/>
+                    <constraint firstAttribute="trailing" secondItem="jCL-o1-WFb" secondAttribute="trailing" constant="15" id="K2V-xr-27E"/>
+                    <constraint firstItem="tUJ-hv-qet" firstAttribute="leading" secondItem="Xb3-1H-YyD" secondAttribute="leading" id="XoS-ct-5wG"/>
+                    <constraint firstItem="Xb3-1H-YyD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ZPr-SO-tL4"/>
+                    <constraint firstItem="h9c-Zh-kKG" firstAttribute="leading" secondItem="Xb3-1H-YyD" secondAttribute="trailing" constant="3" id="afX-Zs-Yus"/>
+                    <constraint firstItem="jCL-o1-WFb" firstAttribute="centerY" secondItem="h9c-Zh-kKG" secondAttribute="centerY" id="c1f-v8-1t2"/>
+                    <constraint firstItem="h9c-Zh-kKG" firstAttribute="centerY" secondItem="Xb3-1H-YyD" secondAttribute="centerY" id="jVo-54-0ll"/>
+                    <constraint firstAttribute="trailing" secondItem="fIN-9c-FGm" secondAttribute="trailing" id="p2s-Ze-nS5"/>
+                    <constraint firstItem="nPc-99-d67" firstAttribute="centerY" secondItem="jCL-o1-WFb" secondAttribute="centerY" id="pGG-LB-gFX"/>
+                    <constraint firstItem="fIN-9c-FGm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="q7d-8e-ncX"/>
+                    <constraint firstItem="Xb3-1H-YyD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qKJ-nE-H9z"/>
+                    <constraint firstItem="tUJ-hv-qet" firstAttribute="top" secondItem="Xb3-1H-YyD" secondAttribute="bottom" constant="16" id="tOC-Os-PPf"/>
+                    <constraint firstItem="tUJ-hv-qet" firstAttribute="trailing" secondItem="jCL-o1-WFb" secondAttribute="trailing" id="weW-F4-Qou"/>
+                    <constraint firstItem="fIN-9c-FGm" firstAttribute="top" secondItem="Xb3-1H-YyD" secondAttribute="bottom" constant="8" id="zCZ-kP-Z34"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="infoLB" destination="tUJ-hv-qet" id="YEL-ft-wji"/>
+                <outlet property="numLB" destination="jCL-o1-WFb" id="6qI-Og-t9Q"/>
+                <outlet property="questionNum" destination="nPc-99-d67" id="DK1-v5-1WT"/>
+                <outlet property="typeTitleLB" destination="h9c-Zh-kKG" id="x6G-dz-KLR"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="2.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="选题标题" width="27" height="27"/>
+    </resources>
+</document>

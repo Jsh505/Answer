@@ -36,6 +36,7 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="rHd-qS-v2H">
                                                     <rect key="frame" x="299.5" y="10" width="60.5" height="60.5"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rHd-qS-v2H" secondAttribute="height" id="sPo-d7-K2N"/>
                                                     </constraints>
@@ -230,6 +231,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="头像" width="84" height="84"/>
+        <image name="头像" width="24" height="24"/>
     </resources>
 </document>

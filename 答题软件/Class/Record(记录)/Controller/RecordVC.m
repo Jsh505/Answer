@@ -8,6 +8,7 @@
 
 #import "RecordVC.h"
 #import "RecordTableViewCell.h"
+#import "ExaminationInfoVC.h"
 
 @interface RecordVC ()
 
@@ -72,7 +73,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ExaminationInfoVC * vc = [[ExaminationInfoVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

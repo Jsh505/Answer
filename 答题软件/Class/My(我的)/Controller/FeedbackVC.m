@@ -76,8 +76,6 @@
 
     NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
     [parametersDic setObject:self.infoTextView.text forKey:@"qContent"];
-    [parametersDic setObject:@([UserSignData share].user.userId) forKey:@"userId"];
-    [parametersDic setObject:[UserSignData share].user.username forKey:@"userName"];
     
     [PPNetworkHelper POST:@"addQa.app" parameters:parametersDic hudString:@"反馈中..." success:^(id responseObject)
      {

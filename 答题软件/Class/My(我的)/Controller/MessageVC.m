@@ -42,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [UserSignData share].user.message.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,6 +60,17 @@
         cell = array[0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    NSDictionary * dic = [UserSignData share].user.message[indexPath.row];
+    
+    NSTimeInterval time=[[dic objectForKey:@"timestamp"] doubleValue]/1000;//传入的时间戳str如果是精确到毫秒的记得要/1000
+    NSDate *detailDate=[NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; //实例化一个NSDateFormatter对象
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *currentDateStr = [dateFormatter stringFromDate: detailDate];
+    
+    cell.infoLB.text = [dic objectForKey:@"content"];
+    cell.timeLB.text = currentDateStr;
     return cell;
 }
 

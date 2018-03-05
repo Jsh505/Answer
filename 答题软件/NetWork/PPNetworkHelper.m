@@ -116,6 +116,7 @@ static NetworkStatus _status;
     
     PPLog(@"❤️GET URL❤️ = %@",URL);
     PPLog(@"⚽️GET 数据⚽️ = %@",parameters);
+    
     AFHTTPSessionManager *manager = [self createAFHTTPSessionManagerWithUrl:URL];
     return [manager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -126,14 +127,14 @@ static NetworkStatus _status;
             [MBProgressHUD hideHUD];
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        if ([[responseObject objectForKey:@"result"] intValue] == 1)
+        if ([[responseObject objectForKey:@"error"] intValue] == 1)
         {
-            success(responseObject);
+            success([responseObject objectForKey:@"data"]);
             PPLog(@"responseObject = %@",responseObject);
         }
         else
         {
-            failure([responseObject objectForKey:@"msg"]);
+            failure([responseObject objectForKey:@"messgae"]);
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
@@ -176,15 +177,15 @@ static NetworkStatus _status;
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        if ([[responseObject objectForKey:@"result"] intValue] == 1)
+        if ([[responseObject objectForKey:@"error"] intValue] == 1)
         {
-            success(responseObject);
-            [PPNetworkCache saveResponseCache:responseObject forKey:URL];
+            success([responseObject objectForKey:@"data"]);
+            [PPNetworkCache saveResponseCache:[responseObject objectForKey:@"data"] forKey:URL];
             PPLog(@"responseObject = %@",responseObject);
         }
         else
         {
-            failure([responseObject objectForKey:@"msg"]);
+            failure([responseObject objectForKey:@"messgae"]);
         }
         
         
@@ -208,47 +209,46 @@ static NetworkStatus _status;
     {
         [MBProgressHUD showActivityMessageInWindow:hudString];
     }
-    
+
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
+
     AFHTTPSessionManager *manager = [self createAFHTTPSessionManagerWithUrl:URL];
     PPLog(@"❤️POST URL❤️ = %@",URL);
     PPLog(@"⚽️POST 数据⚽️ = %@",parameters);
-    
+
     return [manager POST:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-        
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
     {
         if (![NSString is_NulllWithObject:hudString])
         {
             [MBProgressHUD hideHUD];
         }
-        
+
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
-        if ([[responseObject objectForKey:@"result"] intValue] == 1)
+
+        if ([[responseObject objectForKey:@"error"] intValue] == 1)
         {
-            success(responseObject);
+            success([responseObject objectForKey:@"data"]);
             PPLog(@"responseObject = %@",responseObject);
         }
         else
         {
-            failure([responseObject objectForKey:@"msg"]);
+            failure([responseObject objectForKey:@"messgae"]);
         }
-        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
     {
         if (![NSString is_NulllWithObject:hudString])
         {
             [MBProgressHUD hideHUD];
         }
-        
+
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
+
         failure ? failure(error.localizedDescription) : nil;
         PPLog(@"error = %@",error.localizedDescription);
     }];
-    
 }
 
 #pragma mark - POST请求自动缓存
@@ -428,14 +428,14 @@ static NetworkStatus _status;
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        if ([[responseObject objectForKey:@"result"] intValue] == 1)
+        if ([[responseObject objectForKey:@"error"] intValue] == 1)
         {
-            success(responseObject);
+            success([responseObject objectForKey:@"data"]);
             PPLog(@"responseObject = %@",responseObject);
         }
         else
         {
-            failure([responseObject objectForKey:@"msg"]);
+            failure([responseObject objectForKey:@"messgae"]);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
     {
@@ -503,11 +503,13 @@ static NetworkStatus _status;
 //    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:APIEHEAD]];
     
-    
     //设置请求参数的类型:HTTP (AFJSONRequestSerializer,AFHTTPRequestSerializer)
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    
     //设置服务器返回结果的类型:JSON (AFJSONResponseSerializer,AFHTTPResponseSerializer)
-    //manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
     AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
     response.removesKeysWithNullValues = YES;
     manager.responseSerializer = response;
@@ -519,14 +521,16 @@ static NetworkStatus _status;
      5 、服务端需要返回一段json串给客户端 Content-Type="application/json"
      */
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"application/x-www-form-urlencoded", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+//    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     //设置请求的超时时间
-    manager.requestSerializer.timeoutInterval = 30.f;
+//    manager.requestSerializer.timeoutInterval = 30.f;
 //    manager.operationQueue.maxConcurrentOperationCount = 10;
     
 //    if ([UserSignData share].user.ct.length > 0)
 //    {
 //        [manager.requestSerializer setValue:[UserSignData share].user.token forHTTPHeaderField:@"ct"];
 //    }
+    
     return manager;
 }
 

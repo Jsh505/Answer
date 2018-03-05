@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWk-Qp-kNG">
+                    <rect key="frame" x="0.0" y="30" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="清楚缓存" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ8-Hg-PQN">
+                            <rect key="frame" x="15" y="16" width="61.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-2N-yJv">
+                            <rect key="frame" x="0.5" y="0.0" width="375" height="50"/>
+                            <connections>
+                                <action selector="cleanButtonCilick:" destination="-1" eventType="touchUpInside" id="yHE-5N-AoL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8Dw-6W-1bV"/>
+                        <constraint firstItem="OWC-2N-yJv" firstAttribute="centerY" secondItem="yWk-Qp-kNG" secondAttribute="centerY" id="9Lg-1F-fTo"/>
+                        <constraint firstItem="OWC-2N-yJv" firstAttribute="width" secondItem="yWk-Qp-kNG" secondAttribute="width" id="Ye3-ZP-1xm"/>
+                        <constraint firstItem="FZ8-Hg-PQN" firstAttribute="leading" secondItem="yWk-Qp-kNG" secondAttribute="leading" constant="15" id="a7q-or-arz"/>
+                        <constraint firstItem="OWC-2N-yJv" firstAttribute="centerX" secondItem="yWk-Qp-kNG" secondAttribute="centerX" id="cT0-5P-PEN"/>
+                        <constraint firstItem="OWC-2N-yJv" firstAttribute="height" secondItem="yWk-Qp-kNG" secondAttribute="height" id="njv-In-cKy"/>
+                        <constraint firstItem="FZ8-Hg-PQN" firstAttribute="centerY" secondItem="yWk-Qp-kNG" secondAttribute="centerY" id="wR6-89-20R"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKE-Ic-9SG">
+                    <rect key="frame" x="0.0" y="81" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检查更新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-af-UPb">
+                            <rect key="frame" x="15" y="16" width="61.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQz-fQ-5QE">
+                            <rect key="frame" x="0.5" y="0.0" width="375" height="50"/>
+                            <connections>
+                                <action selector="updateButtonCilick:" destination="-1" eventType="touchUpInside" id="eOm-fe-zNn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="eQz-fQ-5QE" firstAttribute="centerX" secondItem="SKE-Ic-9SG" secondAttribute="centerX" id="2gN-n3-HOY"/>
+                        <constraint firstItem="vWA-af-UPb" firstAttribute="centerY" secondItem="SKE-Ic-9SG" secondAttribute="centerY" id="Ezy-tD-yEr"/>
+                        <constraint firstItem="vWA-af-UPb" firstAttribute="leading" secondItem="SKE-Ic-9SG" secondAttribute="leading" constant="15" id="H03-UU-4lh"/>
+                        <constraint firstItem="eQz-fQ-5QE" firstAttribute="width" secondItem="SKE-Ic-9SG" secondAttribute="width" id="IVL-bV-Sen"/>
+                        <constraint firstAttribute="height" constant="50" id="XSS-KQ-v1c"/>
+                        <constraint firstItem="eQz-fQ-5QE" firstAttribute="height" secondItem="SKE-Ic-9SG" secondAttribute="height" id="pAD-tk-Uk3"/>
+                        <constraint firstItem="eQz-fQ-5QE" firstAttribute="centerY" secondItem="SKE-Ic-9SG" secondAttribute="centerY" id="tN2-yQ-VD2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="SKE-Ic-9SG" secondAttribute="trailing" id="87p-Lt-cho"/>
+                <constraint firstItem="yWk-Qp-kNG" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="TrG-1v-Vlw"/>
+                <constraint firstItem="SKE-Ic-9SG" firstAttribute="top" secondItem="yWk-Qp-kNG" secondAttribute="bottom" constant="1" id="WFx-eb-Sl6"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="yWk-Qp-kNG" secondAttribute="trailing" id="XFR-4P-Rjh"/>
+                <constraint firstItem="yWk-Qp-kNG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bEE-FD-GJW"/>
+                <constraint firstItem="SKE-Ic-9SG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hPZ-JF-o1D"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

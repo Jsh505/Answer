@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La7-K1-DF9">
+                    <rect key="frame" x="50" y="555" width="275" height="2"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  使用第三方账号快速登录  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKb-go-MUi">
+                            <rect key="frame" x="45" y="-8.5" width="184.5" height="18"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="VKb-go-MUi" firstAttribute="centerY" secondItem="La7-K1-DF9" secondAttribute="centerY" id="6wL-wD-kdw"/>
+                        <constraint firstItem="VKb-go-MUi" firstAttribute="centerX" secondItem="La7-K1-DF9" secondAttribute="centerX" id="YRE-9f-N3g"/>
+                        <constraint firstAttribute="height" constant="2" id="qg7-qK-mhv"/>
+                    </constraints>
+                </view>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jD9-GP-0yY">
+                    <rect key="frame" x="50" y="577" width="274" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chM-nm-GN3">
+                            <rect key="frame" x="0.0" y="0.0" width="137" height="80"/>
+                            <state key="normal" image="登陆_QQ"/>
+                            <connections>
+                                <action selector="QQLogin:" destination="-1" eventType="touchUpInside" id="B5R-32-fOV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-Vm-OO2">
+                            <rect key="frame" x="137" y="0.0" width="137" height="80"/>
+                            <state key="normal" image="登陆_WX"/>
+                            <connections>
+                                <action selector="WXLogin:" destination="-1" eventType="touchUpInside" id="MqS-ac-Dqu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="QgW-Vm-OO2" firstAttribute="width" secondItem="chM-nm-GN3" secondAttribute="width" id="5hX-su-U3a"/>
+                        <constraint firstAttribute="height" constant="80" id="SCQ-Zt-0re"/>
+                        <constraint firstItem="QgW-Vm-OO2" firstAttribute="height" secondItem="chM-nm-GN3" secondAttribute="height" id="SCX-uc-eJ6"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jD9-GP-0yY" firstAttribute="top" secondItem="La7-K1-DF9" secondAttribute="bottom" constant="20" id="84N-eA-Thf"/>
+                <constraint firstItem="La7-K1-DF9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="DBp-lx-Eua"/>
+                <constraint firstItem="La7-K1-DF9" firstAttribute="centerX" secondItem="jD9-GP-0yY" secondAttribute="centerX" id="Ouv-kT-azh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="jD9-GP-0yY" secondAttribute="bottom" constant="10" id="SXd-rK-L4L"/>
+                <constraint firstItem="jD9-GP-0yY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="WSc-U0-uvW"/>
+                <constraint firstItem="jD9-GP-0yY" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="uWj-Sj-bcw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="登陆_QQ" width="55" height="55"/>
+        <image name="登陆_WX" width="54" height="54"/>
+    </resources>
+</document>

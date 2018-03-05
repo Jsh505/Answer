@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ZLTabBarViewController.h"
 #import <IQKeyboardManager.h>
+#import "LoginVC.h"
+#import "ZLNaviContrViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,10 @@
 
 @implementation AppDelegate
 
++ (instancetype)delegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -24,10 +30,9 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    //2.创建根控制器
-    ZLTabBarViewController *tabBarViewContr = [[ZLTabBarViewController alloc] init];
-    self.window.rootViewController = tabBarViewContr;
-    [self.window makeKeyAndVisible];
+    [self goLogin];
+    
+    
     
     //键盘处理
     [self configureBoardManager];
@@ -44,6 +49,24 @@
     manager.keyboardDistanceFromTextField=60;
     manager.enableAutoToolbar = NO;
 }
+
+- (void)goLogin
+{
+    //登录
+    LoginVC * loginVc = [[LoginVC alloc] init];
+    ZLNaviContrViewController * loginNav = [[ZLNaviContrViewController alloc] initWithRootViewController:loginVc];
+    [self.window setRootViewController:loginNav];
+}
+
+- (void)goHome
+{
+    //主页
+    //2.创建根控制器
+    ZLTabBarViewController *tabBarViewContr = [[ZLTabBarViewController alloc] init];
+    self.window.rootViewController = tabBarViewContr;
+    [self.window makeKeyAndVisible];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -41,9 +41,11 @@
     __weak typeof(self)ws = self;
     _cityPicker = [LZCityPickerView showInView:self.view didSelectWithBlock:^(NSString *address, NSString *province, NSString *city, NSString *area) {
         
-        if (ws.backBlock) {
+        if (ws.backBlock)
+        {
             ws.backBlock(address, province, city, area);
         }
+        
     } cancelBlock:^{
         
         [ws.view removeFromSuperview];
@@ -52,8 +54,8 @@
     
     // picker的一些属性可以在这里配置
 
-//    _cityPicker.type = LZPickerTypeCity;
-//        _cityPicker.autoChange = YES;
+    _cityPicker.type = LZPickerTypeCity;
+    _cityPicker.autoChange = NO;
 //        _cityPicker.backgroundImage = [UIImage imageNamed:@"40fe711f9b754b596159f3a6.jpg"];
 //    
 //        _cityPicker.textAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]};

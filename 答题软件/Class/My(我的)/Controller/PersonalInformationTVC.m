@@ -11,10 +11,11 @@
 #import "LZCityPickerController.h"
 #import "ChangeNameVC.h"
 
-@interface PersonalInformationTVC () <LDImagePickerDelegate>
-{
-    NSString * _headeImage;
-}
+typedef void(^CallBackBlcok)();
+
+@interface PersonalInformationTVC () <LDImagePickerDelegate, UITextViewDelegate>
+
+@property (nonatomic,copy)CallBackBlcok callBackBlock;
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerImage;
 @property (weak, nonatomic) IBOutlet UILabel *nickName;
@@ -27,6 +28,11 @@
 
 @property (nonatomic, strong) UIView * masView;
 @property (nonatomic, strong) UIDatePicker * datePicker;
+
+@property (nonatomic, copy) NSString * birth;
+@property (nonatomic, copy) NSString * province;
+@property (nonatomic, copy) NSString * city;
+
 @end
 
 @implementation PersonalInformationTVC
@@ -37,7 +43,12 @@
     [super viewDidLoad];
     
     self.title = @"个人资料";
-    
+    self.textView.delegate = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self upView];
 }
 
@@ -56,8 +67,29 @@
     [pickerFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [pickerFormatter stringFromDate:pickerDate];
     
+    self.birth = dateString;
+}
+
+- (void)birthButtonClicked
+{
+    [self closeView];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];// 创建一个时间格式化对象
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"]; //设定时间的格式
+    NSDate *tempDate = [dateFormatter dateFromString:self.birth];//将字符串转换为时间对象
+    NSString *timeStr = [NSString stringWithFormat:@"%ld", (long)[tempDate timeIntervalSince1970]*1000];//字符串转成时间戳,精确到毫秒*1000
+
     //打印显示日期时间
-    self.birthLB.text = dateString;
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:timeStr forKey:@"birthday"];
+    [self postInfoWithdic:parametersDic];
+    kWeakSelf(self)
+    self.callBackBlock = ^()
+    {
+        weakself.birthLB.text = weakself.birth;
+        [UserSignData share].user.birthday = weakself.birth;
+        [[UserSignData share] storageData:[UserSignData share].user];
+    };
 }
 
 - (void)closegrdenChoseView
@@ -68,11 +100,32 @@
 - (void)girlbuttonClicked
 {
     [self closegrdenChoseView];
+    
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:@"女" forKey:@"gender"];
+    [self postInfoWithdic:parametersDic];
+    kWeakSelf(self)
+    self.callBackBlock = ^()
+    {
+        weakself.grdenLB.text = @"女";
+        [UserSignData share].user.gender = @"女";
+        [[UserSignData share] storageData:[UserSignData share].user];
+    };
 }
 
 - (void)boybuttonClicked
 {
     [self closegrdenChoseView];
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:@"男" forKey:@"gender"];
+    [self postInfoWithdic:parametersDic];
+    kWeakSelf(self)
+    self.callBackBlock = ^()
+    {
+        weakself.grdenLB.text = @"男";
+        [UserSignData share].user.gender = @"男";
+        [[UserSignData share] storageData:[UserSignData share].user];
+    };
 }
 
 #pragma mark - IBActions(xib响应方法)
@@ -80,13 +133,30 @@
 
 #pragma mark - Public (.h 公共调用方法)
 
-
-
 #pragma mark - Private (.m 私有方法)
 
 - (void)upView
 {
+    [self.headerImage jsh_sdsetImageWithHeaderimg:[UserSignData share].user.icon];
+    self.nickName.text = [UserSignData share].user.nick_name;
+    self.grdenLB.text = [UserSignData share].user.gender;
+    self.birthLB.text = [UserSignData share].user.birthday;
+    self.cityLB.text = [NSString stringWithFormat:@"%@,%@",[UserSignData share].user.province,[UserSignData share].user.city];
+    self.textView.text = [UserSignData share].user.user_info;
+}
+
+- (void)postInfoWithdic:(NSDictionary *)dic
+{
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] initWithDictionary:dic];
+    [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
+    [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
     
+    [PPNetworkHelper POST:@"/user/information/" parameters:parametersDic hudString:nil success:^(id responseObject)
+    {
+        self.callBackBlock();
+    } failure:^(NSString *error)
+    {
+    }];
 }
 
 - (void)showView
@@ -111,9 +181,24 @@
     }];
 }
 
+
+
 #pragma mark - Deletate/DataSource (相关代理)
 
-- (void)imagePickerDidCancel:(LDImagePicker *)imagePicker{
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:textView.text forKey:@"user_info"];
+    [self postInfoWithdic:parametersDic];
+    self.callBackBlock = ^()
+    {
+        [UserSignData share].user.user_info = textView.text;
+        [[UserSignData share] storageData:[UserSignData share].user];
+    };
+}
+
+- (void)imagePickerDidCancel:(LDImagePicker *)imagePicker
+{
     
 }
 
@@ -124,13 +209,17 @@
     NSTimeInterval a=[dat timeIntervalSince1970]*1000;
     NSString *timeString = [NSString stringWithFormat:@"%f", a];
     
-    [PPNetworkHelper uploadWithURL:@"uploadPicture.app" parameters:nil images:@[editedImage] name:@"pictureName" fileName:timeString mimeType:@"png" hudString:@"上传中..." progress:^(NSProgress *progress) {
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
+    [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
+    
+    [PPNetworkHelper uploadWithURL:@"/user/icon_upload/" parameters:parametersDic images:@[editedImage] name:@"img_upload" fileName:timeString mimeType:@"png" hudString:@"上传中..." progress:^(NSProgress *progress) {
         
     } success:^(id responseObject)
      {
          self.headerImage.image = editedImage;
-         _headeImage = [responseObject objectForKey:@"pictureName"][0];
-         
+         [UserSignData share].user.icon = [responseObject objectForKey:@"icon"];
+         [[UserSignData share] storageData:[UserSignData share].user];
      } failure:^(NSString *error)
      {
          [MBProgressHUD showInfoMessage:error];
@@ -199,9 +288,18 @@
         [LZCityPickerController showPickerInViewController:self selectBlock:^(NSString *address, NSString *province, NSString *city, NSString *area) {
             
             // 选择结果回调
-            self.cityLB.text = [NSString stringWithFormat:@"%@%@%@",province,city,area];
-            NSLog(@"%@--%@--%@--%@",address,province,city,area);
-            
+            NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+            [parametersDic setObject:province forKey:@"province"];
+            [parametersDic setObject:city forKey:@"city"];
+            [self postInfoWithdic:parametersDic];
+            kWeakSelf(self)
+            self.callBackBlock = ^()
+            {
+                weakself.cityLB.text = [NSString stringWithFormat:@"%@,%@",province,city];
+                [UserSignData share].user.province = province;
+                [UserSignData share].user.city = city;
+                [[UserSignData share] storageData:[UserSignData share].user];
+            };
         }];
     }
     
@@ -246,6 +344,15 @@
         titleLabel.textColor = [UIColor mainColor];
         titleLabel.font = [UIFont systemFontOfSize:17];
         [_masView addSubview:titleLabel];
+        
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(SCREEN_WIDTH - 50, SCREEN_HEIGHT - 216 - JSH_SafeBottomMargin - 40, 40, 40);
+        button.titleLabel.font = [UIFont systemFontOfSize:15];
+        [button setTitle:@"确定" forState: UIControlStateNormal];
+        [button setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor clearColor];
+        [button addTarget:self action:@selector(birthButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+        [_masView addSubview:button];
         
         UILabel * sureLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 50, SCREEN_HEIGHT - 216 - JSH_SafeBottomMargin - 40, 40, 40)];
         sureLabel.text = @"确定";

@@ -10,4 +10,7 @@
 
 @interface MessageCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *infoLB;
+@property (weak, nonatomic) IBOutlet UILabel *timeLB;
+
 @end

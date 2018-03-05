@@ -12,6 +12,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (instancetype)delegate;
+
+- (void)goLogin;
+
+- (void)goHome;
 
 @end
 

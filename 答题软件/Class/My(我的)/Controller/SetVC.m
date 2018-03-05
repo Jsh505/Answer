@@ -2,35 +2,32 @@
 //  SetVC.m
 //  答题软件
 //
-//  Created by 贾仕海 on 2018/2/23.
+//  Created by 贾仕海 on 2018/2/24.
 //  Copyright © 2018年 jsh. All rights reserved.
 //
 
-#import "UserSetVC.h"
-#import "PassWordSetVC.h"
+#import "SetVC.h"
 
-@interface UserSetVC ()
+@interface SetVC ()
 
 @end
 
-@implementation UserSetVC
+@implementation SetVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"账号管理";
+    self.title = @"设置";
 }
 
-- (IBAction)setPasswordButtonCilick:(id)sender
+- (IBAction)cleanButtonCilick:(id)sender
 {
-    //设置密码
-    PassWordSetVC * vc = [[PassWordSetVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
-- (IBAction)canelButtonCilick:(id)sender
+- (IBAction)updateButtonCilick:(id)sender
 {
-    //退出
+    
 }
 
 @end

@@ -35,7 +35,7 @@
                             </constraints>
                             <state key="normal" image="我的消息"/>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页_未选" translatesAutoresizingMaskIntoConstraints="NO" id="U77-oF-bXs">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="U77-oF-bXs">
                             <rect key="frame" x="15" y="76.5" width="79.5" height="79.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="U77-oF-bXs" secondAttribute="height" id="Sl2-8Y-Lh4"/>
@@ -191,6 +191,9 @@
             <connections>
                 <outlet property="messageButton" destination="Ig7-yF-VBI" id="Fjq-Z7-JTr"/>
                 <outlet property="myshoucangButton" destination="LTT-Rb-Dt6" id="UEC-Ie-PI8"/>
+                <outlet property="nickNameLB" destination="MWw-60-Qbb" id="vQn-Iw-M7g"/>
+                <outlet property="phoneLB" destination="U8b-p8-E49" id="5EI-3c-F64"/>
+                <outlet property="userImageView" destination="U77-oF-bXs" id="VWg-Lv-5xK"/>
                 <outlet property="zhanghuguanliButton" destination="gmi-FG-bFb" id="FAr-t8-6LS"/>
                 <outlet property="zhangjielianxiBUtton" destination="6ad-vu-4JU" id="wfK-Vf-Owf"/>
             </connections>
@@ -199,9 +202,9 @@
     </objects>
     <resources>
         <image name="个人中心" width="30" height="30"/>
+        <image name="头像" width="24" height="24"/>
         <image name="我的收藏" width="30" height="30"/>
         <image name="我的消息" width="21" height="21"/>
         <image name="账户管理" width="27" height="27"/>
-        <image name="首页_未选" width="24" height="24"/>
     </resources>
 </document>

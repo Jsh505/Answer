@@ -366,7 +366,6 @@ forHTTPHeaderField:(NSString *)field
     }
 
     mutableRequest = [[self requestBySerializingRequest:mutableRequest withParameters:parameters error:error] mutableCopy];
-
 	return mutableRequest;
 }
 
@@ -508,7 +507,8 @@ forHTTPHeaderField:(NSString *)field
         if (!query) {
             query = @"";
         }
-        if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"]) {
+        if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"])
+        {
             [mutableRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         }
         [mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];

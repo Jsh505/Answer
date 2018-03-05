@@ -353,6 +353,7 @@
     UIButton *cancleButton = [UIButton buttonWithType:UIButtonTypeSystem];
     cancleButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
     [cancleButton setTitle:[NSBundle py_localizedStringForKey:PYSearchCancelButtonText] forState:UIControlStateNormal];
+    [cancleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [cancleButton addTarget:self action:@selector(cancelDidClick)  forControlEvents:UIControlEventTouchUpInside];
     [cancleButton sizeToFit];
     cancleButton.py_width += PYSEARCH_MARGIN;

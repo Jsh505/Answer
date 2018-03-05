@@ -36,6 +36,7 @@
 #import "SDWebImageManager.h"
 #import "UIImageView+WebCache.h"
 
+
 #define kCycleScrollViewInitialPageControlDotSize CGSizeMake(10, 10)
 
 NSString * const ID = @"SDCycleScrollViewCell";
@@ -584,17 +585,23 @@ NSString * const ID = @"SDCycleScrollViewCell";
     
     NSString *imagePath = self.imagePathsGroup[itemIndex];
     
-    if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
-        if ([imagePath hasPrefix:@"http"]) {
+    if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]])
+    {
+        if ([imagePath hasPrefix:@"http"])
+        {
             [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
-        } else {
+        }
+        else
+        {
             UIImage *image = [UIImage imageNamed:imagePath];
-            if (!image) {
+            if (!image)
+            {
                 image = [UIImage imageWithContentsOfFile:imagePath];
             }
             cell.imageView.image = image;
         }
-    } else if (!self.onlyDisplayText && [imagePath isKindOfClass:[UIImage class]]) {
+    } else if (!self.onlyDisplayText && [imagePath isKindOfClass:[UIImage class]])
+    {
         cell.imageView.image = (UIImage *)imagePath;
     }
     

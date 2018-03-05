@@ -15,6 +15,7 @@
 #import "UserSetVC.h"
 #import "AboutVC.h"
 #import "FeedbackVC.h"
+#import "SetVC.h"
 
 @interface MyVC ()
 
@@ -47,6 +48,10 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
+    [self.headerView.userImageView jsh_sdsetImageWithHeaderimg:[UserSignData share].user.icon];
+    self.headerView.nickNameLB.text = [UserSignData share].user.nick_name;
+    self.headerView.phoneLB.text = [UserSignData share].user.phone;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -136,6 +141,12 @@
     {
         //反馈意见
         FeedbackVC * vc = [[FeedbackVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (sec == 0 && row == 2)
+    {
+        //设置
+        SetVC * vc = [[SetVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     

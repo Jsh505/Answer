@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1B4040B245FEBFBCCE689095 /* libPods-答题软件.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB512F165ED0417F59CB2 /* libPods-答题软件.a */; };
+		A83A267E20410FC600D7C90F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A267820410FC600D7C90F /* LoginVC.m */; };
+		A83A267F20410FC600D7C90F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A267920410FC600D7C90F /* RegisterVC.m */; };
+		A83A268020410FC600D7C90F /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83A267B20410FC600D7C90F /* RegisterVC.xib */; };
+		A83A268120410FC600D7C90F /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83A267C20410FC600D7C90F /* LoginVC.xib */; };
+		A83A2685204111BF00D7C90F /* EBTAttributeLinkClickLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A2683204111BF00D7C90F /* EBTAttributeLinkClickLabel.m */; };
+		A83A2688204114D000D7C90F /* ForgetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A2687204114D000D7C90F /* ForgetPasswordVC.m */; };
+		A83A268F204145CF00D7C90F /* SetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A268D204145CF00D7C90F /* SetVC.m */; };
+		A83A2690204145CF00D7C90F /* SetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83A268E204145CF00D7C90F /* SetVC.xib */; };
 		A850E0082032BCD400AE46A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A850E0072032BCD400AE46A1 /* AppDelegate.m */; };
 		A850E00B2032BCD400AE46A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A850E00A2032BCD400AE46A1 /* ViewController.m */; };
 		A850E00E2032BCD400AE46A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A850E00C2032BCD400AE46A1 /* Main.storyboard */; };
@@ -84,12 +92,72 @@
 		A850E0F7204018D200AE46A1 /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A850E0F5204018D200AE46A1 /* AboutVC.xib */; };
 		A850E0FB20401AC300AE46A1 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A850E0F920401AC200AE46A1 /* FeedbackVC.m */; };
 		A850E0FC20401AC300AE46A1 /* FeedbackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A850E0FA20401AC200AE46A1 /* FeedbackVC.xib */; };
+		A8543F522047A89000CB413C /* SearchRuesltVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8543F512047A89000CB413C /* SearchRuesltVC.m */; };
+		A8543F5A2047EB3800CB413C /* QuestionsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8543F592047EB3800CB413C /* QuestionsInfoModel.m */; };
+		A8543F5D2047ED1D00CB413C /* QuestionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8543F5C2047ED1D00CB413C /* QuestionsModel.m */; };
+		A8A27FE420454684009E9CB1 /* ErrorCorrectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A27FE320454684009E9CB1 /* ErrorCorrectionView.m */; };
+		A8A27FE62045468D009E9CB1 /* ErrorCorrectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A27FE52045468D009E9CB1 /* ErrorCorrectionView.xib */; };
+		A8A27FE92046EA5C009E9CB1 /* FL_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A27FE72046EA5C009E9CB1 /* FL_Button.m */; };
+		A8A27FED2047909D009E9CB1 /* HomeTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A27FEB2047909D009E9CB1 /* HomeTitleViewCell.m */; };
+		A8A27FEE2047909D009E9CB1 /* HomeTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A27FEC2047909D009E9CB1 /* HomeTitleViewCell.xib */; };
+		A8CAEFA820428FF500229B24 /* ExaminationInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFA620428FF500229B24 /* ExaminationInfoVC.m */; };
+		A8CAEFA920428FF500229B24 /* ExaminationInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFA720428FF500229B24 /* ExaminationInfoVC.xib */; };
+		A8CAEFAD2042930800229B24 /* ExaminationTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFAB2042930800229B24 /* ExaminationTitleCell.m */; };
+		A8CAEFAE2042930800229B24 /* ExaminationTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFAC2042930800229B24 /* ExaminationTitleCell.xib */; };
+		A8CAEFB22042948E00229B24 /* ExaminationInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFB02042948E00229B24 /* ExaminationInfoCell.m */; };
+		A8CAEFB32042948E00229B24 /* ExaminationInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFB12042948E00229B24 /* ExaminationInfoCell.xib */; };
+		A8CAEFB72042965D00229B24 /* ExaminationOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFB52042965D00229B24 /* ExaminationOtherCell.m */; };
+		A8CAEFB82042965D00229B24 /* ExaminationOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFB62042965D00229B24 /* ExaminationOtherCell.xib */; };
+		A8CAEFC120429C2C00229B24 /* AnswerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFBF20429C2C00229B24 /* AnswerVC.m */; };
+		A8CAEFC220429C2C00229B24 /* AnswerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFC020429C2C00229B24 /* AnswerVC.xib */; };
+		A8CAEFCB2042A0B500229B24 /* AnswerTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFC92042A0B500229B24 /* AnswerTitleCell.m */; };
+		A8CAEFCC2042A0B500229B24 /* AnswerTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFCA2042A0B500229B24 /* AnswerTitleCell.xib */; };
+		A8CAEFD02042A5A000229B24 /* AnswerOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFCE2042A5A000229B24 /* AnswerOptionCell.m */; };
+		A8CAEFD12042A5A000229B24 /* AnswerOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFCF2042A5A000229B24 /* AnswerOptionCell.xib */; };
+		A8CAEFD52042A79E00229B24 /* AnswerCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFD32042A79E00229B24 /* AnswerCardVC.m */; };
+		A8CAEFD62042A79E00229B24 /* AnswerCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFD42042A79E00229B24 /* AnswerCardVC.xib */; };
+		A8CAEFDA2042ABFE00229B24 /* AnswerCardCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFD82042ABFE00229B24 /* AnswerCardCCell.m */; };
+		A8CAEFDB2042ABFE00229B24 /* AnswerCardCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFD92042ABFE00229B24 /* AnswerCardCCell.xib */; };
+		A8CAEFDE2042B0F300229B24 /* ChapterExercisesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFDD2042B0F300229B24 /* ChapterExercisesVC.m */; };
+		A8CAEFE12042B19400229B24 /* ChapterExercisesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFE02042B19400229B24 /* ChapterExercisesCellModel.m */; };
+		A8CAEFE42042B20300229B24 /* ChapterExercisesSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFE32042B20300229B24 /* ChapterExercisesSectionModel.m */; };
+		A8CAEFEC2042B9B000229B24 /* ChapterExercisesHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFEB2042B9B000229B24 /* ChapterExercisesHeaderView.m */; };
+		A8CAEFEE2042B9BA00229B24 /* ChapterExercisesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFED2042B9BA00229B24 /* ChapterExercisesHeaderView.xib */; };
+		A8CAEFF22042BB8300229B24 /* ChapterExercisesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFF02042BB8300229B24 /* ChapterExercisesCell.m */; };
+		A8CAEFF32042BB8300229B24 /* ChapterExercisesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFF12042BB8300229B24 /* ChapterExercisesCell.xib */; };
+		A8CAEFF62042BC8E00229B24 /* WrongExerciseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFF52042BC8E00229B24 /* WrongExerciseVC.m */; };
+		A8CAEFF92042BCF800229B24 /* WrongExerciseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFF82042BCF800229B24 /* WrongExerciseHeaderView.m */; };
+		A8CAEFFB2042BD0100229B24 /* WrongExerciseHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFFA2042BD0100229B24 /* WrongExerciseHeaderView.xib */; };
+		A8CAEFFF2042BDA700229B24 /* WrongExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAEFFD2042BDA700229B24 /* WrongExerciseCell.m */; };
+		A8CAF0002042BDA700229B24 /* WrongExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAEFFE2042BDA700229B24 /* WrongExerciseCell.xib */; };
+		A8CAF0042045305400229B24 /* TestResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAF0022045305400229B24 /* TestResultVC.m */; };
+		A8CAF0052045305400229B24 /* TestResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAF0032045305400229B24 /* TestResultVC.xib */; };
+		A8CAF00820453AE500229B24 /* RankingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAF00720453AE500229B24 /* RankingListVC.m */; };
+		A8CAF00C20453BC300229B24 /* RankingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CAF00A20453BC300229B24 /* RankingListCell.m */; };
+		A8CAF00D20453BC300229B24 /* RankingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CAF00B20453BC300229B24 /* RankingListCell.xib */; };
+		A8D2FFAC2048EBE7002F21BD /* AnswerImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D2FFAA2048EBE7002F21BD /* AnswerImageCell.m */; };
+		A8D2FFAD2048EBE7002F21BD /* AnswerImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D2FFAB2048EBE7002F21BD /* AnswerImageCell.xib */; };
+		A8D2FFB0204951F5002F21BD /* AnswerFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D2FFAF204951F5002F21BD /* AnswerFooterView.m */; };
+		A8D2FFB22049522A002F21BD /* AnswerFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D2FFB12049522A002F21BD /* AnswerFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		077BC8D2C9819B0B358F6C5A /* Pods-答题软件.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-答题软件.debug.xcconfig"; path = "Pods/Target Support Files/Pods-答题软件/Pods-答题软件.debug.xcconfig"; sourceTree = "<group>"; };
 		1B1DB512F165ED0417F59CB2 /* libPods-答题软件.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-答题软件.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAA3347DC2FDCF82F10E762 /* Pods-答题软件.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-答题软件.release.xcconfig"; path = "Pods/Target Support Files/Pods-答题软件/Pods-答题软件.release.xcconfig"; sourceTree = "<group>"; };
+		A83A267820410FC600D7C90F /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		A83A267920410FC600D7C90F /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		A83A267A20410FC600D7C90F /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		A83A267B20410FC600D7C90F /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		A83A267C20410FC600D7C90F /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		A83A267D20410FC600D7C90F /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		A83A2683204111BF00D7C90F /* EBTAttributeLinkClickLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTAttributeLinkClickLabel.m; sourceTree = "<group>"; };
+		A83A2684204111BF00D7C90F /* EBTAttributeLinkClickLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTAttributeLinkClickLabel.h; sourceTree = "<group>"; };
+		A83A2686204114D000D7C90F /* ForgetPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordVC.h; sourceTree = "<group>"; };
+		A83A2687204114D000D7C90F /* ForgetPasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordVC.m; sourceTree = "<group>"; };
+		A83A268C204145CF00D7C90F /* SetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetVC.h; sourceTree = "<group>"; };
+		A83A268D204145CF00D7C90F /* SetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetVC.m; sourceTree = "<group>"; };
+		A83A268E204145CF00D7C90F /* SetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetVC.xib; sourceTree = "<group>"; };
 		A850E0032032BCD400AE46A1 /* 答题软件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "答题软件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A850E0062032BCD400AE46A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A850E0072032BCD400AE46A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,6 +293,81 @@
 		A850E0F820401AC200AE46A1 /* FeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackVC.h; sourceTree = "<group>"; };
 		A850E0F920401AC200AE46A1 /* FeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackVC.m; sourceTree = "<group>"; };
 		A850E0FA20401AC200AE46A1 /* FeedbackVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackVC.xib; sourceTree = "<group>"; };
+		A8543F502047A89000CB413C /* SearchRuesltVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRuesltVC.h; sourceTree = "<group>"; };
+		A8543F512047A89000CB413C /* SearchRuesltVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRuesltVC.m; sourceTree = "<group>"; };
+		A8543F582047EB3800CB413C /* QuestionsInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionsInfoModel.h; sourceTree = "<group>"; };
+		A8543F592047EB3800CB413C /* QuestionsInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionsInfoModel.m; sourceTree = "<group>"; };
+		A8543F5B2047ED1D00CB413C /* QuestionsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionsModel.h; sourceTree = "<group>"; };
+		A8543F5C2047ED1D00CB413C /* QuestionsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionsModel.m; sourceTree = "<group>"; };
+		A8A27FE220454684009E9CB1 /* ErrorCorrectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorCorrectionView.h; sourceTree = "<group>"; };
+		A8A27FE320454684009E9CB1 /* ErrorCorrectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorCorrectionView.m; sourceTree = "<group>"; };
+		A8A27FE52045468D009E9CB1 /* ErrorCorrectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCorrectionView.xib; sourceTree = "<group>"; };
+		A8A27FE72046EA5C009E9CB1 /* FL_Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FL_Button.m; sourceTree = "<group>"; };
+		A8A27FE82046EA5C009E9CB1 /* FL_Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FL_Button.h; sourceTree = "<group>"; };
+		A8A27FEA2047909D009E9CB1 /* HomeTitleViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTitleViewCell.h; sourceTree = "<group>"; };
+		A8A27FEB2047909D009E9CB1 /* HomeTitleViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTitleViewCell.m; sourceTree = "<group>"; };
+		A8A27FEC2047909D009E9CB1 /* HomeTitleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTitleViewCell.xib; sourceTree = "<group>"; };
+		A8CAEFA520428FF500229B24 /* ExaminationInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExaminationInfoVC.h; sourceTree = "<group>"; };
+		A8CAEFA620428FF500229B24 /* ExaminationInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExaminationInfoVC.m; sourceTree = "<group>"; };
+		A8CAEFA720428FF500229B24 /* ExaminationInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExaminationInfoVC.xib; sourceTree = "<group>"; };
+		A8CAEFAA2042930800229B24 /* ExaminationTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExaminationTitleCell.h; sourceTree = "<group>"; };
+		A8CAEFAB2042930800229B24 /* ExaminationTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExaminationTitleCell.m; sourceTree = "<group>"; };
+		A8CAEFAC2042930800229B24 /* ExaminationTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExaminationTitleCell.xib; sourceTree = "<group>"; };
+		A8CAEFAF2042948E00229B24 /* ExaminationInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExaminationInfoCell.h; sourceTree = "<group>"; };
+		A8CAEFB02042948E00229B24 /* ExaminationInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExaminationInfoCell.m; sourceTree = "<group>"; };
+		A8CAEFB12042948E00229B24 /* ExaminationInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExaminationInfoCell.xib; sourceTree = "<group>"; };
+		A8CAEFB42042965D00229B24 /* ExaminationOtherCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExaminationOtherCell.h; sourceTree = "<group>"; };
+		A8CAEFB52042965D00229B24 /* ExaminationOtherCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExaminationOtherCell.m; sourceTree = "<group>"; };
+		A8CAEFB62042965D00229B24 /* ExaminationOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExaminationOtherCell.xib; sourceTree = "<group>"; };
+		A8CAEFBE20429C2C00229B24 /* AnswerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerVC.h; sourceTree = "<group>"; };
+		A8CAEFBF20429C2C00229B24 /* AnswerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerVC.m; sourceTree = "<group>"; };
+		A8CAEFC020429C2C00229B24 /* AnswerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerVC.xib; sourceTree = "<group>"; };
+		A8CAEFC82042A0B500229B24 /* AnswerTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerTitleCell.h; sourceTree = "<group>"; };
+		A8CAEFC92042A0B500229B24 /* AnswerTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerTitleCell.m; sourceTree = "<group>"; };
+		A8CAEFCA2042A0B500229B24 /* AnswerTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerTitleCell.xib; sourceTree = "<group>"; };
+		A8CAEFCD2042A5A000229B24 /* AnswerOptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerOptionCell.h; sourceTree = "<group>"; };
+		A8CAEFCE2042A5A000229B24 /* AnswerOptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerOptionCell.m; sourceTree = "<group>"; };
+		A8CAEFCF2042A5A000229B24 /* AnswerOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerOptionCell.xib; sourceTree = "<group>"; };
+		A8CAEFD22042A79E00229B24 /* AnswerCardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerCardVC.h; sourceTree = "<group>"; };
+		A8CAEFD32042A79E00229B24 /* AnswerCardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerCardVC.m; sourceTree = "<group>"; };
+		A8CAEFD42042A79E00229B24 /* AnswerCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCardVC.xib; sourceTree = "<group>"; };
+		A8CAEFD72042ABFE00229B24 /* AnswerCardCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerCardCCell.h; sourceTree = "<group>"; };
+		A8CAEFD82042ABFE00229B24 /* AnswerCardCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerCardCCell.m; sourceTree = "<group>"; };
+		A8CAEFD92042ABFE00229B24 /* AnswerCardCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCardCCell.xib; sourceTree = "<group>"; };
+		A8CAEFDC2042B0F300229B24 /* ChapterExercisesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterExercisesVC.h; sourceTree = "<group>"; };
+		A8CAEFDD2042B0F300229B24 /* ChapterExercisesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterExercisesVC.m; sourceTree = "<group>"; };
+		A8CAEFDF2042B19400229B24 /* ChapterExercisesCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterExercisesCellModel.h; sourceTree = "<group>"; };
+		A8CAEFE02042B19400229B24 /* ChapterExercisesCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterExercisesCellModel.m; sourceTree = "<group>"; };
+		A8CAEFE22042B20300229B24 /* ChapterExercisesSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterExercisesSectionModel.h; sourceTree = "<group>"; };
+		A8CAEFE32042B20300229B24 /* ChapterExercisesSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterExercisesSectionModel.m; sourceTree = "<group>"; };
+		A8CAEFEA2042B9B000229B24 /* ChapterExercisesHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterExercisesHeaderView.h; sourceTree = "<group>"; };
+		A8CAEFEB2042B9B000229B24 /* ChapterExercisesHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterExercisesHeaderView.m; sourceTree = "<group>"; };
+		A8CAEFED2042B9BA00229B24 /* ChapterExercisesHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterExercisesHeaderView.xib; sourceTree = "<group>"; };
+		A8CAEFEF2042BB8300229B24 /* ChapterExercisesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterExercisesCell.h; sourceTree = "<group>"; };
+		A8CAEFF02042BB8300229B24 /* ChapterExercisesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterExercisesCell.m; sourceTree = "<group>"; };
+		A8CAEFF12042BB8300229B24 /* ChapterExercisesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterExercisesCell.xib; sourceTree = "<group>"; };
+		A8CAEFF42042BC8E00229B24 /* WrongExerciseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WrongExerciseVC.h; sourceTree = "<group>"; };
+		A8CAEFF52042BC8E00229B24 /* WrongExerciseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WrongExerciseVC.m; sourceTree = "<group>"; };
+		A8CAEFF72042BCF800229B24 /* WrongExerciseHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WrongExerciseHeaderView.h; sourceTree = "<group>"; };
+		A8CAEFF82042BCF800229B24 /* WrongExerciseHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WrongExerciseHeaderView.m; sourceTree = "<group>"; };
+		A8CAEFFA2042BD0100229B24 /* WrongExerciseHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongExerciseHeaderView.xib; sourceTree = "<group>"; };
+		A8CAEFFC2042BDA700229B24 /* WrongExerciseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WrongExerciseCell.h; sourceTree = "<group>"; };
+		A8CAEFFD2042BDA700229B24 /* WrongExerciseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WrongExerciseCell.m; sourceTree = "<group>"; };
+		A8CAEFFE2042BDA700229B24 /* WrongExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongExerciseCell.xib; sourceTree = "<group>"; };
+		A8CAF0012045305400229B24 /* TestResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestResultVC.h; sourceTree = "<group>"; };
+		A8CAF0022045305400229B24 /* TestResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestResultVC.m; sourceTree = "<group>"; };
+		A8CAF0032045305400229B24 /* TestResultVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestResultVC.xib; sourceTree = "<group>"; };
+		A8CAF00620453AE500229B24 /* RankingListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankingListVC.h; sourceTree = "<group>"; };
+		A8CAF00720453AE500229B24 /* RankingListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankingListVC.m; sourceTree = "<group>"; };
+		A8CAF00920453BC300229B24 /* RankingListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankingListCell.h; sourceTree = "<group>"; };
+		A8CAF00A20453BC300229B24 /* RankingListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankingListCell.m; sourceTree = "<group>"; };
+		A8CAF00B20453BC300229B24 /* RankingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingListCell.xib; sourceTree = "<group>"; };
+		A8D2FFA92048EBE7002F21BD /* AnswerImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerImageCell.h; sourceTree = "<group>"; };
+		A8D2FFAA2048EBE7002F21BD /* AnswerImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerImageCell.m; sourceTree = "<group>"; };
+		A8D2FFAB2048EBE7002F21BD /* AnswerImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerImageCell.xib; sourceTree = "<group>"; };
+		A8D2FFAE204951F5002F21BD /* AnswerFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerFooterView.h; sourceTree = "<group>"; };
+		A8D2FFAF204951F5002F21BD /* AnswerFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerFooterView.m; sourceTree = "<group>"; };
+		A8D2FFB12049522A002F21BD /* AnswerFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +382,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A83A267720410FC600D7C90F /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				A83A267A20410FC600D7C90F /* LoginVC.h */,
+				A83A267820410FC600D7C90F /* LoginVC.m */,
+				A83A267C20410FC600D7C90F /* LoginVC.xib */,
+				A83A267D20410FC600D7C90F /* RegisterVC.h */,
+				A83A267920410FC600D7C90F /* RegisterVC.m */,
+				A83A267B20410FC600D7C90F /* RegisterVC.xib */,
+				A83A2686204114D000D7C90F /* ForgetPasswordVC.h */,
+				A83A2687204114D000D7C90F /* ForgetPasswordVC.m */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		A83A2682204111BF00D7C90F /* EBTAttributeLinkClickLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A83A2683204111BF00D7C90F /* EBTAttributeLinkClickLabel.m */,
+				A83A2684204111BF00D7C90F /* EBTAttributeLinkClickLabel.h */,
+			);
+			path = EBTAttributeLinkClickLabel;
+			sourceTree = "<group>";
+		};
 		A850DFFA2032BCD400AE46A1 = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +451,7 @@
 		A850E01C2032BE6600AE46A1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A83A267720410FC600D7C90F /* 登录 */,
 				A850E01D2032BE6600AE46A1 /* Home(首页) */,
 				A850E0252032BE6600AE46A1 /* Examination(考试) */,
 				A850E0212032BE6600AE46A1 /* Record(记录) */,
@@ -307,10 +475,30 @@
 			children = (
 				A850E08B2032C85E00AE46A1 /* HomeVC.h */,
 				A850E08C2032C85E00AE46A1 /* HomeVC.m */,
+				A8543F502047A89000CB413C /* SearchRuesltVC.h */,
+				A8543F512047A89000CB413C /* SearchRuesltVC.m */,
+				A8CAEFDC2042B0F300229B24 /* ChapterExercisesVC.h */,
+				A8CAEFDD2042B0F300229B24 /* ChapterExercisesVC.m */,
 				A850E0D62035961F00AE46A1 /* SimulationTestVC.h */,
 				A850E0D72035961F00AE46A1 /* SimulationTestVC.m */,
 				A850E0D92035967C00AE46A1 /* OverTheYearsVC.h */,
 				A850E0DA2035967C00AE46A1 /* OverTheYearsVC.m */,
+				A8CAEFF42042BC8E00229B24 /* WrongExerciseVC.h */,
+				A8CAEFF52042BC8E00229B24 /* WrongExerciseVC.m */,
+				A8CAEFA520428FF500229B24 /* ExaminationInfoVC.h */,
+				A8CAEFA620428FF500229B24 /* ExaminationInfoVC.m */,
+				A8CAEFA720428FF500229B24 /* ExaminationInfoVC.xib */,
+				A8CAEFBE20429C2C00229B24 /* AnswerVC.h */,
+				A8CAEFBF20429C2C00229B24 /* AnswerVC.m */,
+				A8CAEFC020429C2C00229B24 /* AnswerVC.xib */,
+				A8CAEFD22042A79E00229B24 /* AnswerCardVC.h */,
+				A8CAEFD32042A79E00229B24 /* AnswerCardVC.m */,
+				A8CAEFD42042A79E00229B24 /* AnswerCardVC.xib */,
+				A8CAF0012045305400229B24 /* TestResultVC.h */,
+				A8CAF0022045305400229B24 /* TestResultVC.m */,
+				A8CAF0032045305400229B24 /* TestResultVC.xib */,
+				A8CAF00620453AE500229B24 /* RankingListVC.h */,
+				A8CAF00720453AE500229B24 /* RankingListVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,6 +506,14 @@
 		A850E01F2032BE6600AE46A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8CAEFDF2042B19400229B24 /* ChapterExercisesCellModel.h */,
+				A8CAEFE02042B19400229B24 /* ChapterExercisesCellModel.m */,
+				A8CAEFE22042B20300229B24 /* ChapterExercisesSectionModel.h */,
+				A8CAEFE32042B20300229B24 /* ChapterExercisesSectionModel.m */,
+				A8543F582047EB3800CB413C /* QuestionsInfoModel.h */,
+				A8543F592047EB3800CB413C /* QuestionsInfoModel.m */,
+				A8543F5B2047ED1D00CB413C /* QuestionsModel.h */,
+				A8543F5C2047ED1D00CB413C /* QuestionsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +530,51 @@
 				A850E0A52032D31A00AE46A1 /* HomeTableViewCell.h */,
 				A850E0A62032D31A00AE46A1 /* HomeTableViewCell.m */,
 				A850E0A72032D31A00AE46A1 /* HomeTableViewCell.xib */,
+				A8A27FEA2047909D009E9CB1 /* HomeTitleViewCell.h */,
+				A8A27FEB2047909D009E9CB1 /* HomeTitleViewCell.m */,
+				A8A27FEC2047909D009E9CB1 /* HomeTitleViewCell.xib */,
+				A8CAEFEA2042B9B000229B24 /* ChapterExercisesHeaderView.h */,
+				A8CAEFEB2042B9B000229B24 /* ChapterExercisesHeaderView.m */,
+				A8CAEFED2042B9BA00229B24 /* ChapterExercisesHeaderView.xib */,
+				A8CAEFEF2042BB8300229B24 /* ChapterExercisesCell.h */,
+				A8CAEFF02042BB8300229B24 /* ChapterExercisesCell.m */,
+				A8CAEFF12042BB8300229B24 /* ChapterExercisesCell.xib */,
+				A8CAEFF72042BCF800229B24 /* WrongExerciseHeaderView.h */,
+				A8CAEFF82042BCF800229B24 /* WrongExerciseHeaderView.m */,
+				A8CAEFFA2042BD0100229B24 /* WrongExerciseHeaderView.xib */,
+				A8CAEFFC2042BDA700229B24 /* WrongExerciseCell.h */,
+				A8CAEFFD2042BDA700229B24 /* WrongExerciseCell.m */,
+				A8CAEFFE2042BDA700229B24 /* WrongExerciseCell.xib */,
+				A8CAEFAA2042930800229B24 /* ExaminationTitleCell.h */,
+				A8CAEFAB2042930800229B24 /* ExaminationTitleCell.m */,
+				A8CAEFAC2042930800229B24 /* ExaminationTitleCell.xib */,
+				A8CAEFAF2042948E00229B24 /* ExaminationInfoCell.h */,
+				A8CAEFB02042948E00229B24 /* ExaminationInfoCell.m */,
+				A8CAEFB12042948E00229B24 /* ExaminationInfoCell.xib */,
+				A8CAEFB42042965D00229B24 /* ExaminationOtherCell.h */,
+				A8CAEFB52042965D00229B24 /* ExaminationOtherCell.m */,
+				A8CAEFB62042965D00229B24 /* ExaminationOtherCell.xib */,
+				A8CAEFC82042A0B500229B24 /* AnswerTitleCell.h */,
+				A8CAEFC92042A0B500229B24 /* AnswerTitleCell.m */,
+				A8CAEFCA2042A0B500229B24 /* AnswerTitleCell.xib */,
+				A8D2FFA92048EBE7002F21BD /* AnswerImageCell.h */,
+				A8D2FFAA2048EBE7002F21BD /* AnswerImageCell.m */,
+				A8D2FFAB2048EBE7002F21BD /* AnswerImageCell.xib */,
+				A8CAEFCD2042A5A000229B24 /* AnswerOptionCell.h */,
+				A8CAEFCE2042A5A000229B24 /* AnswerOptionCell.m */,
+				A8CAEFCF2042A5A000229B24 /* AnswerOptionCell.xib */,
+				A8CAEFD72042ABFE00229B24 /* AnswerCardCCell.h */,
+				A8CAEFD82042ABFE00229B24 /* AnswerCardCCell.m */,
+				A8CAEFD92042ABFE00229B24 /* AnswerCardCCell.xib */,
+				A8CAF00920453BC300229B24 /* RankingListCell.h */,
+				A8CAF00A20453BC300229B24 /* RankingListCell.m */,
+				A8CAF00B20453BC300229B24 /* RankingListCell.xib */,
+				A8A27FE220454684009E9CB1 /* ErrorCorrectionView.h */,
+				A8A27FE320454684009E9CB1 /* ErrorCorrectionView.m */,
+				A8A27FE52045468D009E9CB1 /* ErrorCorrectionView.xib */,
+				A8D2FFAE204951F5002F21BD /* AnswerFooterView.h */,
+				A8D2FFAF204951F5002F21BD /* AnswerFooterView.m */,
+				A8D2FFB12049522A002F21BD /* AnswerFooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +686,9 @@
 				A850E0F820401AC200AE46A1 /* FeedbackVC.h */,
 				A850E0F920401AC200AE46A1 /* FeedbackVC.m */,
 				A850E0FA20401AC200AE46A1 /* FeedbackVC.xib */,
+				A83A268C204145CF00D7C90F /* SetVC.h */,
+				A83A268D204145CF00D7C90F /* SetVC.m */,
+				A83A268E204145CF00D7C90F /* SetVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -564,6 +808,9 @@
 		A850E0322032C18200AE46A1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A8A27FE82046EA5C009E9CB1 /* FL_Button.h */,
+				A8A27FE72046EA5C009E9CB1 /* FL_Button.m */,
+				A83A2682204111BF00D7C90F /* EBTAttributeLinkClickLabel */,
 				A850E0C72035924900AE46A1 /* LZCityPickerClass */,
 				A850E0C02035922900AE46A1 /* LDImagePicker */,
 				A850E0732032C45300AE46A1 /* MBProgressHUD+JDragon */,
@@ -684,18 +931,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83A268120410FC600D7C90F /* LoginVC.xib in Resources */,
 				A850E09F2032CF0500AE46A1 /* HomeFourButtonView.xib in Resources */,
+				A8CAF0002042BDA700229B24 /* WrongExerciseCell.xib in Resources */,
+				A8A27FE62045468D009E9CB1 /* ErrorCorrectionView.xib in Resources */,
 				A850E0F2204017BA00AE46A1 /* PassWordSetVC.xib in Resources */,
+				A8CAEFDB2042ABFE00229B24 /* AnswerCardCCell.xib in Resources */,
+				A8CAF0052045305400229B24 /* TestResultVC.xib in Resources */,
 				A850E0B52032DF9D00AE46A1 /* MyTableHeaderView.xib in Resources */,
+				A8CAEFFB2042BD0100229B24 /* WrongExerciseHeaderView.xib in Resources */,
+				A8CAEFA920428FF500229B24 /* ExaminationInfoVC.xib in Resources */,
 				A850E0132032BCD400AE46A1 /* LaunchScreen.storyboard in Resources */,
 				A850E0772032C45300AE46A1 /* MBProgressHUD+JDragon.bundle in Resources */,
 				A850E0FC20401AC300AE46A1 /* FeedbackVC.xib in Resources */,
+				A8CAEFAE2042930800229B24 /* ExaminationTitleCell.xib in Resources */,
+				A8CAEFB32042948E00229B24 /* ExaminationInfoCell.xib in Resources */,
 				A850E0E8204001A200AE46A1 /* ChangeNameVC.xib in Resources */,
+				A8CAEFC220429C2C00229B24 /* AnswerVC.xib in Resources */,
+				A8D2FFB22049522A002F21BD /* AnswerFooterView.xib in Resources */,
+				A8CAEFD62042A79E00229B24 /* AnswerCardVC.xib in Resources */,
 				A850E0102032BCD400AE46A1 /* Assets.xcassets in Resources */,
+				A8CAEFD12042A5A000229B24 /* AnswerOptionCell.xib in Resources */,
 				A850E0E3203FFF2000AE46A1 /* MessageCell.xib in Resources */,
+				A8CAEFCC2042A0B500229B24 /* AnswerTitleCell.xib in Resources */,
+				A83A268020410FC600D7C90F /* RegisterVC.xib in Resources */,
+				A8D2FFAD2048EBE7002F21BD /* AnswerImageCell.xib in Resources */,
+				A8A27FEE2047909D009E9CB1 /* HomeTitleViewCell.xib in Resources */,
 				A850E0BE2035906A00AE46A1 /* PersonalInformationTVC.storyboard in Resources */,
 				A850E0A92032D31A00AE46A1 /* HomeTableViewCell.xib in Resources */,
+				A8CAEFEE2042B9BA00229B24 /* ChapterExercisesHeaderView.xib in Resources */,
+				A83A2690204145CF00D7C90F /* SetVC.xib in Resources */,
 				A850E0BA2032E0E700AE46A1 /* MyTableViewCell.xib in Resources */,
+				A8CAF00D20453BC300229B24 /* RankingListCell.xib in Resources */,
+				A8CAEFB82042965D00229B24 /* ExaminationOtherCell.xib in Resources */,
+				A8CAEFF32042BB8300229B24 /* ChapterExercisesCell.xib in Resources */,
 				A850E0D12035924900AE46A1 /* Address.plist in Resources */,
 				A850E0A42032D15800AE46A1 /* HomeTableViewHeaderView.xib in Resources */,
 				A850E0922032C8AE00AE46A1 /* ExaminationVC.xib in Resources */,
@@ -770,11 +1039,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A850E0B12032D9FF00AE46A1 /* MyTableHeaderView.m in Sources */,
+				A8CAEFEC2042B9B000229B24 /* ChapterExercisesHeaderView.m in Sources */,
 				A850E0A82032D31A00AE46A1 /* HomeTableViewCell.m in Sources */,
 				A850E0612032C19700AE46A1 /* NSDictionary+Tool.m in Sources */,
+				A8CAEFE42042B20300229B24 /* ChapterExercisesSectionModel.m in Sources */,
 				A850E0EC2040156C00AE46A1 /* UserSetVC.m in Sources */,
 				A850E0DB2035967C00AE46A1 /* OverTheYearsVC.m in Sources */,
 				A850E05F2032C19700AE46A1 /* UIViewController+Tool.m in Sources */,
+				A83A2685204111BF00D7C90F /* EBTAttributeLinkClickLabel.m in Sources */,
 				A850E0BF2035906A00AE46A1 /* PersonalInformationTVC.m in Sources */,
 				A850E0812032C46000AE46A1 /* UserInfoModel.m in Sources */,
 				A850E09D2032CEFB00AE46A1 /* HomeFourButtonView.m in Sources */,
@@ -783,46 +1055,76 @@
 				A850E08D2032C85E00AE46A1 /* HomeVC.m in Sources */,
 				A850E0A22032D15000AE46A1 /* HomeTableViewHeaderView.m in Sources */,
 				A850E0582032C19700AE46A1 /* NSString+Tool.m in Sources */,
+				A8543F522047A89000CB413C /* SearchRuesltVC.m in Sources */,
 				A850E06E2032C2EB00AE46A1 /* ZLNaviContrViewController.m in Sources */,
 				A850E0642032C19700AE46A1 /* ObjcRuntime.m in Sources */,
 				A850E05C2032C19700AE46A1 /* NullSafe.m in Sources */,
 				A850E0682032C19700AE46A1 /* NSMutableString+Tool.m in Sources */,
 				A850E0672032C19700AE46A1 /* CoustromViewController.m in Sources */,
 				A850E0CF2035924900AE46A1 /* LZCityPickerView.m in Sources */,
+				A8CAEFF22042BB8300229B24 /* ChapterExercisesCell.m in Sources */,
 				A850E0832032C46000AE46A1 /* BaseModel.m in Sources */,
+				A83A2688204114D000D7C90F /* ForgetPasswordVC.m in Sources */,
 				A850E0952032C8D100AE46A1 /* RecordVC.m in Sources */,
 				A850E0C62035922900AE46A1 /* LDImagePicker.m in Sources */,
+				A8D2FFB0204951F5002F21BD /* AnswerFooterView.m in Sources */,
 				A850E0652032C19700AE46A1 /* NSArray+Tool.m in Sources */,
+				A8CAEFD02042A5A000229B24 /* AnswerOptionCell.m in Sources */,
 				A850E0D22035924900AE46A1 /* LZCityPickerController.m in Sources */,
 				A850E0632032C19700AE46A1 /* UIButton+countDown.m in Sources */,
 				A850E00B2032BCD400AE46A1 /* ViewController.m in Sources */,
 				A850E0712032C2F900AE46A1 /* UIBarButtonItem+Extension.m in Sources */,
 				A850E0892032C46C00AE46A1 /* PPNetworkHelper.m in Sources */,
+				A8CAEFB22042948E00229B24 /* ExaminationInfoCell.m in Sources */,
+				A8CAEFF62042BC8E00229B24 /* WrongExerciseVC.m in Sources */,
 				A850E05B2032C19700AE46A1 /* NSObject+Tool.m in Sources */,
+				A83A267E20410FC600D7C90F /* LoginVC.m in Sources */,
+				A8A27FE92046EA5C009E9CB1 /* FL_Button.m in Sources */,
+				A8CAEFC120429C2C00229B24 /* AnswerVC.m in Sources */,
 				A850E0912032C8AE00AE46A1 /* ExaminationVC.m in Sources */,
 				A850E0AD2032D7EA00AE46A1 /* RecordTableViewCell.m in Sources */,
 				A850E0D82035961F00AE46A1 /* SimulationTestVC.m in Sources */,
 				A850E0DE203FFDD600AE46A1 /* MessageVC.m in Sources */,
+				A8A27FE420454684009E9CB1 /* ErrorCorrectionView.m in Sources */,
+				A83A268F204145CF00D7C90F /* SetVC.m in Sources */,
 				A850E0162032BCD400AE46A1 /* main.m in Sources */,
 				A850E0082032BCD400AE46A1 /* AppDelegate.m in Sources */,
 				A850E0C52035922900AE46A1 /* VPImageCropperViewController.m in Sources */,
+				A8CAEFB72042965D00229B24 /* ExaminationOtherCell.m in Sources */,
+				A8CAF0042045305400229B24 /* TestResultVC.m in Sources */,
+				A8D2FFAC2048EBE7002F21BD /* AnswerImageCell.m in Sources */,
 				A850E08A2032C46C00AE46A1 /* PPNetworkCache.m in Sources */,
 				A850E0822032C46000AE46A1 /* UserModel.m in Sources */,
+				A8543F5D2047ED1D00CB413C /* QuestionsModel.m in Sources */,
+				A83A267F20410FC600D7C90F /* RegisterVC.m in Sources */,
 				A850E0622032C19700AE46A1 /* UIView+Tool.m in Sources */,
 				A850E0F6204018D200AE46A1 /* AboutVC.m in Sources */,
+				A8CAEFDE2042B0F300229B24 /* ChapterExercisesVC.m in Sources */,
 				A850E05E2032C19700AE46A1 /* UIButton+TouchOne.m in Sources */,
 				A850E0662032C19700AE46A1 /* UIButton+SDSetImage.m in Sources */,
+				A8CAEFAD2042930800229B24 /* ExaminationTitleCell.m in Sources */,
+				A8A27FED2047909D009E9CB1 /* HomeTitleViewCell.m in Sources */,
 				A850E0FB20401AC300AE46A1 /* FeedbackVC.m in Sources */,
 				A850E0E2203FFF2000AE46A1 /* MessageCell.m in Sources */,
+				A8CAEFCB2042A0B500229B24 /* AnswerTitleCell.m in Sources */,
 				A850E0D52035955900AE46A1 /* MyCollectionVC.m in Sources */,
+				A8CAEFFF2042BDA700229B24 /* WrongExerciseCell.m in Sources */,
+				A8CAEFDA2042ABFE00229B24 /* AnswerCardCCell.m in Sources */,
+				A8CAEFF92042BCF800229B24 /* WrongExerciseHeaderView.m in Sources */,
 				A850E0F1204017BA00AE46A1 /* PassWordSetVC.m in Sources */,
 				A850E0782032C45300AE46A1 /* MBProgressHUD+JDragon.m in Sources */,
+				A8543F5A2047EB3800CB413C /* QuestionsInfoModel.m in Sources */,
+				A8CAEFE12042B19400229B24 /* ChapterExercisesCellModel.m in Sources */,
 				A850E0E7204001A200AE46A1 /* ChangeNameVC.m in Sources */,
 				A850E0592032C19700AE46A1 /* UIColor+Tool.m in Sources */,
 				A850E09A2032C8FF00AE46A1 /* MyVC.m in Sources */,
+				A8CAEFD52042A79E00229B24 /* AnswerCardVC.m in Sources */,
 				A850E05D2032C19700AE46A1 /* UIImageView+SDSetImage.m in Sources */,
 				A850E0D02035924900AE46A1 /* LZPickerModel.m in Sources */,
+				A8CAF00820453AE500229B24 /* RankingListVC.m in Sources */,
+				A8CAF00C20453BC300229B24 /* RankingListCell.m in Sources */,
 				A850E05A2032C19700AE46A1 /* UIScrollView+EmptyDataSet.m in Sources */,
+				A8CAEFA820428FF500229B24 /* ExaminationInfoVC.m in Sources */,
 				A850E06D2032C2EB00AE46A1 /* ZLTabBarViewController.m in Sources */,
 				A850E0602032C19700AE46A1 /* UIImage+Tool.m in Sources */,
 				A850E0B92032E0E700AE46A1 /* MyTableViewCell.m in Sources */,
@@ -963,7 +1265,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YDNS3RJ6S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jiashihai/Desktop/答题软件/答题软件/Answer_PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/jiashihai/Desktop/Answer/答题软件/Answer_PrefixHeader.pch";
 				INFOPLIST_FILE = "答题软件/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -981,7 +1283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YDNS3RJ6S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jiashihai/Desktop/答题软件/答题软件/Answer_PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/jiashihai/Desktop/Answer/答题软件/Answer_PrefixHeader.pch";
 				INFOPLIST_FILE = "答题软件/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
