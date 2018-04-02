@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIButton * rightBarButton;
 @property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 @property (weak, nonatomic) IBOutlet UIButton *photoButton;
+@property (nonatomic, strong) UIImage * editImage;
 
 
 @end
@@ -73,19 +74,31 @@
         [MBProgressHUD showErrorMessage:@"内容不能为空"];
         return;
     }
+    if (!self.editImage)
+    {
+        [MBProgressHUD showErrorMessage:@"图片不能为空"];
+        return;
+    }
 
-    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
-    [parametersDic setObject:self.infoTextView.text forKey:@"qContent"];
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[dat timeIntervalSince1970]*1000;
+    NSString *timeString = [NSString stringWithFormat:@"%f", a];
     
-    [PPNetworkHelper POST:@"addQa.app" parameters:parametersDic hudString:@"反馈中..." success:^(id responseObject)
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
+    [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
+    [parametersDic setObject:self.infoTextView.text forKey:@"report"];
+    
+    [PPNetworkHelper uploadWithURL:@"/user/user_report/" parameters:parametersDic images:@[self.editImage] name:@"img_upload" fileName:timeString mimeType:@"png" hudString:@"上传中..." progress:^(NSProgress *progress) {
+        
+    } success:^(id responseObject)
      {
-        [MBProgressHUD showInfoMessage:@"反馈成功"];
-         self.infoTextView.text = @"";
+         [MBProgressHUD showInfoMessage:@"提交成功"];
          [self.navigationController popViewControllerAnimated:YES];
-    } failure:^(NSString *error)
+     } failure:^(NSString *error)
      {
-        [MBProgressHUD showErrorMessage:error];
-    }];
+         [MBProgressHUD showInfoMessage:error];
+     }];
 }
 #pragma mark - Public (.h 公共调用方法)
 
@@ -98,11 +111,8 @@
 - (void)imagePicker:(LDImagePicker *)imagePicker didFinished:(UIImage *)editedImage{
     
     //上传图片
-    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
-    NSTimeInterval a=[dat timeIntervalSince1970]*1000;
-    NSString *timeString = [NSString stringWithFormat:@"%f", a];
-    
-    
+    self.editImage = editedImage;
+    [self.photoButton setImage:editedImage forState:UIControlStateNormal];
 }
 
 #pragma mark - Deletate/DataSource (相关代理)

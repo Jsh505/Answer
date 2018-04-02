@@ -9,8 +9,12 @@
 #import "RecordVC.h"
 #import "RecordTableViewCell.h"
 #import "ExaminationInfoVC.h"
+#import "RecordModel.h"
+#import "TestResultVC.h"
 
 @interface RecordVC ()
+
+@property (nonatomic, strong) NSMutableArray * dataSource;
 
 @end
 
@@ -23,11 +27,35 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(search) image:@"搜索" highImage:@"搜索"];
+//    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(search) image:@"搜索" highImage:@"搜索"];
     
     self.coustromTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - JSH_NavbarAndStatusBarHeight - JSH_TabBarHeight);
     
+    self.dataSource = [[NSMutableArray alloc] init];
     [self.view addSubview:self.coustromTableView];
+    
+    [self loadData];
+}
+
+- (void)loadData
+{
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
+    [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
+    
+    [PPNetworkHelper POST:@"/online/record_list/" parameters:parametersDic hudString:@"获取中..." success:^(id responseObject)
+     {
+         [self.dataSource removeAllObjects];
+         for (NSDictionary * dic in responseObject)
+         {
+             RecordModel * model = [[RecordModel alloc] initWithDictionary:dic];
+             [self.dataSource addObject:model];
+         }
+         [self.coustromTableView reloadData];
+    } failure:^(NSString *error)
+    {
+        [MBProgressHUD showErrorMessage:error];
+    }];
 }
 
 #pragma mark - Custom Accessors (控件响应方法)
@@ -50,7 +78,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return self.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,6 +94,7 @@
         cell = array[0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    cell.model = self.dataSource[indexPath.row];
     return cell;
 }
 
@@ -73,7 +102,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ExaminationInfoVC * vc = [[ExaminationInfoVC alloc] init];
+    RecordModel * model = self.dataSource[indexPath.row];
+    TestResultVC * vc = [[TestResultVC alloc] init];
+    vc.recordModel = model;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,21 +63,32 @@
                         <constraint firstAttribute="height" constant="80" id="5Ko-LX-Qat"/>
                     </constraints>
                 </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="YrC-ri-4bh">
+                    <rect key="frame" x="30" y="0.0" width="315" height="315"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="YrC-ri-4bh" secondAttribute="height" id="Fn5-gW-kLD"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="YrC-ri-4bh" firstAttribute="centerX" secondItem="Ph3-Y8-E5r" secondAttribute="centerX" id="8pg-f3-54Q"/>
                 <constraint firstItem="7f3-d0-eHC" firstAttribute="leading" secondItem="Ph3-Y8-E5r" secondAttribute="leading" constant="50" id="DoJ-Fk-rLA"/>
+                <constraint firstItem="YrC-ri-4bh" firstAttribute="top" secondItem="ijy-tO-Qjb" secondAttribute="top" id="J66-3S-PzH"/>
                 <constraint firstItem="Ya3-Mf-uui" firstAttribute="leading" secondItem="Ph3-Y8-E5r" secondAttribute="leading" constant="50" id="LJP-Kb-bDd"/>
                 <constraint firstItem="7f3-d0-eHC" firstAttribute="centerX" secondItem="Ph3-Y8-E5r" secondAttribute="centerX" id="UMH-p1-vNL"/>
                 <constraint firstItem="7f3-d0-eHC" firstAttribute="top" secondItem="Ya3-Mf-uui" secondAttribute="bottom" constant="20" id="Xob-7g-gqS"/>
                 <constraint firstItem="Ya3-Mf-uui" firstAttribute="centerX" secondItem="7f3-d0-eHC" secondAttribute="centerX" id="iTi-1H-HUm"/>
                 <constraint firstItem="Ph3-Y8-E5r" firstAttribute="bottom" secondItem="7f3-d0-eHC" secondAttribute="bottom" constant="10" id="ptz-90-QE8"/>
+                <constraint firstItem="YrC-ri-4bh" firstAttribute="width" secondItem="YrC-ri-4bh" secondAttribute="height" id="v1e-Bo-ARR"/>
+                <constraint firstItem="YrC-ri-4bh" firstAttribute="leading" secondItem="Ph3-Y8-E5r" secondAttribute="leading" constant="30" id="veT-Cs-njE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Ph3-Y8-E5r"/>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>
+        <image name="icon" width="1024" height="1024"/>
         <image name="登陆_QQ" width="55" height="55"/>
         <image name="登陆_WX" width="54" height="54"/>
     </resources>

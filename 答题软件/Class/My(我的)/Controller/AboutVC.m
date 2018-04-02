@@ -20,6 +20,21 @@
     self.title = @"关于得分王i";
 }
 
+- (IBAction)callKefu:(id)sender
+{
+//    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"0415-7609988"];
+//    UIWebView * callWebview = [[UIWebView alloc] init];
+//    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+//    [self.view addSubview:callWebview];
+    
+    NSString *callPhone = [NSString stringWithFormat:@"telprompt://%@", @"0415-7609988"];
+    if (@available(iOS 10.0, *)) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone] options:@{} completionHandler:nil];
+    } else {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

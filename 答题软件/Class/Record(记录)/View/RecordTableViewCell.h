@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecordModel.h"
 
 @interface RecordTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLB;
+@property (weak, nonatomic) IBOutlet UILabel *userNumLB;
+@property (weak, nonatomic) IBOutlet UILabel *fullNumLB;
+@property (nonatomic, strong) RecordModel * model;
 
 @end

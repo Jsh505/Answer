@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,18 +19,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uMM-7T-JQV">
-                    <rect key="frame" x="67" y="52" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="uMM-7T-JQV">
+                    <rect key="frame" x="100" y="64" width="175" height="175"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="240" id="PYv-Cp-TVG"/>
-                        <constraint firstAttribute="height" constant="128" id="UWA-3u-ZMT"/>
+                        <constraint firstAttribute="width" secondItem="uMM-7T-JQV" secondAttribute="height" id="sep-LE-UbN"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1.0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfg-qa-IMo">
-                    <rect key="frame" x="152.5" y="210" width="70" height="20"/>
+                    <rect key="frame" x="153" y="269" width="70" height="20"/>
                     <color key="backgroundColor" red="0.23529411759999999" green="0.51372549020000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="dM1-Rk-eqs"/>
@@ -44,14 +44,17 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-FS-An6">
-                    <rect key="frame" x="20" y="260" width="334" height="67"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-FS-An6">
+                    <rect key="frame" x="20" y="319" width="335" height="200.66666666666663"/>
+                    <mutableString key="text">“得分王”APP应用介绍
+“得分王”APP是安科职业教育为广大消防考生特别定制的一款职业资质考学软件，是一款同时集“注册消防工程师”、“注册安全工程师”、“消防控制室操作员”、“特种作业人员”专业考学课程于一体的备考APP，由消防、安全专家组成员、高校知名教授、业内高工学术顾问等实力大咖全程助力；海量进阶题库更是包含章节练习、权威押题、历年真题、模拟测试，同时多种学习模式可供选择，旨在让学、练、考真正同步护航，在这里无论是进阶练习、还是查遗补漏均超乎你的想象！是职业考生的首选得分神器！
+还在等什么？快动动手指下载吧！</mutableString>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nyi-He-bym">
-                    <rect key="frame" x="0.0" y="382" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="549.66666666666663" width="375" height="44"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的关于" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-sc-BX0">
                             <rect key="frame" x="63" y="10" width="24" height="24"/>
@@ -62,21 +65,31 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400-010-0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-h7-tJu">
-                            <rect key="frame" x="175" y="10.5" width="139.5" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0415-7609988" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-h7-tJu">
+                            <rect key="frame" x="175" y="10.666666666666742" width="140.66666666666663" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2b-EU-j5k">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <connections>
+                                <action selector="callKefu:" destination="-1" eventType="touchUpInside" id="mph-GL-iQJ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="l2b-EU-j5k" firstAttribute="height" secondItem="Nyi-He-bym" secondAttribute="height" id="03N-zH-6n6"/>
                         <constraint firstItem="vQV-hH-DJr" firstAttribute="leading" secondItem="IFI-sc-BX0" secondAttribute="trailing" constant="3" id="5lL-fN-Pqd"/>
                         <constraint firstItem="IFI-sc-BX0" firstAttribute="centerY" secondItem="Nyi-He-bym" secondAttribute="centerY" id="Lyp-ra-lnJ"/>
                         <constraint firstItem="iz9-h7-tJu" firstAttribute="centerY" secondItem="vQV-hH-DJr" secondAttribute="centerY" id="Mr5-TX-Wkm"/>
                         <constraint firstItem="IFI-sc-BX0" firstAttribute="centerX" secondItem="Nyi-He-bym" secondAttribute="centerX" multiplier="0.4" id="Yol-Ci-F1b"/>
                         <constraint firstItem="iz9-h7-tJu" firstAttribute="leading" secondItem="vQV-hH-DJr" secondAttribute="trailing" constant="3" id="gDo-xj-kxf"/>
+                        <constraint firstItem="l2b-EU-j5k" firstAttribute="centerX" secondItem="Nyi-He-bym" secondAttribute="centerX" id="pr4-6C-xhr"/>
+                        <constraint firstItem="l2b-EU-j5k" firstAttribute="width" secondItem="Nyi-He-bym" secondAttribute="width" id="tvS-PF-ZfG"/>
                         <constraint firstAttribute="height" constant="44" id="vqe-f6-esa"/>
+                        <constraint firstItem="l2b-EU-j5k" firstAttribute="centerY" secondItem="Nyi-He-bym" secondAttribute="centerY" id="yhE-fK-jmf"/>
                         <constraint firstItem="vQV-hH-DJr" firstAttribute="centerY" secondItem="IFI-sc-BX0" secondAttribute="centerY" id="zLe-oM-g5p"/>
                     </constraints>
                 </view>
@@ -84,21 +97,23 @@
             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qlz-FS-An6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="0Y6-5G-tca"/>
+                <constraint firstItem="qlz-FS-An6" firstAttribute="centerX" secondItem="uMM-7T-JQV" secondAttribute="centerX" id="20r-od-jQp"/>
                 <constraint firstItem="Nyi-He-bym" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="712-qp-wiY"/>
-                <constraint firstItem="Nyi-He-bym" firstAttribute="top" secondItem="qlz-FS-An6" secondAttribute="bottom" constant="55" id="96B-Sz-ozT"/>
-                <constraint firstItem="uMM-7T-JQV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="67" id="A7s-4W-5mh"/>
-                <constraint firstItem="qlz-FS-An6" firstAttribute="centerX" secondItem="rfg-qa-IMo" secondAttribute="centerX" id="AhV-ef-pcm"/>
+                <constraint firstItem="Nyi-He-bym" firstAttribute="top" secondItem="qlz-FS-An6" secondAttribute="bottom" constant="30" id="96B-Sz-ozT"/>
+                <constraint firstItem="uMM-7T-JQV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="100" id="A7s-4W-5mh"/>
                 <constraint firstItem="rfg-qa-IMo" firstAttribute="top" secondItem="uMM-7T-JQV" secondAttribute="bottom" constant="30" id="J5A-eb-mZE"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="uMM-7T-JQV" secondAttribute="trailing" constant="68" id="QO3-bc-lLV"/>
-                <constraint firstItem="uMM-7T-JQV" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="32" id="f8c-m3-Uqb"/>
+                <constraint firstItem="uMM-7T-JQV" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="VJn-TH-AAJ"/>
+                <constraint firstItem="uMM-7T-JQV" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="f8c-m3-Uqb"/>
                 <constraint firstItem="qlz-FS-An6" firstAttribute="top" secondItem="rfg-qa-IMo" secondAttribute="bottom" constant="30" id="ksd-ae-57b"/>
                 <constraint firstItem="Nyi-He-bym" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="tkz-Xm-sla"/>
                 <constraint firstItem="rfg-qa-IMo" firstAttribute="centerX" secondItem="uMM-7T-JQV" secondAttribute="centerX" id="yZ7-m9-kRJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="52"/>
         </view>
     </objects>
     <resources>
+        <image name="icon" width="1024" height="1024"/>
         <image name="我的关于" width="24" height="24"/>
     </resources>
 </document>

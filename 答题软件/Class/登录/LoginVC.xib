@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,14 +63,23 @@
                         <constraint firstItem="QgW-Vm-OO2" firstAttribute="height" secondItem="chM-nm-GN3" secondAttribute="height" id="SCX-uc-eJ6"/>
                     </constraints>
                 </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="fpn-TP-hmj">
+                    <rect key="frame" x="30" y="20" width="314" height="314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fpn-TP-hmj" secondAttribute="height" id="4Wm-iU-CR6"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fpn-TP-hmj" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="5p3-gv-PDI"/>
                 <constraint firstItem="jD9-GP-0yY" firstAttribute="top" secondItem="La7-K1-DF9" secondAttribute="bottom" constant="20" id="84N-eA-Thf"/>
                 <constraint firstItem="La7-K1-DF9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="DBp-lx-Eua"/>
+                <constraint firstItem="fpn-TP-hmj" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="MA9-ve-VPX"/>
                 <constraint firstItem="La7-K1-DF9" firstAttribute="centerX" secondItem="jD9-GP-0yY" secondAttribute="centerX" id="Ouv-kT-azh"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="jD9-GP-0yY" secondAttribute="bottom" constant="10" id="SXd-rK-L4L"/>
                 <constraint firstItem="jD9-GP-0yY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="WSc-U0-uvW"/>
+                <constraint firstItem="fpn-TP-hmj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="fem-ic-0KO"/>
                 <constraint firstItem="jD9-GP-0yY" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="uWj-Sj-bcw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
@@ -77,6 +87,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon" width="1024" height="1024"/>
         <image name="登陆_QQ" width="55" height="55"/>
         <image name="登陆_WX" width="54" height="54"/>
     </resources>

@@ -21,7 +21,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setModel:(ChapterExercisesCellModel *)model
+- (void)setModel:(QuestionsInfoModel *)model
 {
     _model = model;
     self.titleLB.text = model.section;

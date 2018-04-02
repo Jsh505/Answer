@@ -36,19 +36,19 @@
                             <state key="normal" image="我的消息"/>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="U77-oF-bXs">
-                            <rect key="frame" x="15" y="76.5" width="79.5" height="79.5"/>
+                            <rect key="frame" x="35" y="76.5" width="79.5" height="79.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="U77-oF-bXs" secondAttribute="height" id="Sl2-8Y-Lh4"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称。。。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWw-60-Qbb">
-                            <rect key="frame" x="134.5" y="96" width="87" height="20.5"/>
+                            <rect key="frame" x="129.5" y="96" width="87" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18974734734" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8b-p8-E49">
-                            <rect key="frame" x="134.5" y="126.5" width="107" height="20.5"/>
+                            <rect key="frame" x="129.5" y="126.5" width="107" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -57,12 +57,12 @@
                     <color key="backgroundColor" red="0.23529411764705882" green="0.51372549019607838" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="MWw-60-Qbb" firstAttribute="centerY" secondItem="U77-oF-bXs" secondAttribute="centerY" constant="-10" id="7AI-6O-lXf"/>
-                        <constraint firstItem="MWw-60-Qbb" firstAttribute="leading" secondItem="U77-oF-bXs" secondAttribute="trailing" constant="40" id="AhY-Rb-rP6"/>
+                        <constraint firstItem="MWw-60-Qbb" firstAttribute="leading" secondItem="U77-oF-bXs" secondAttribute="trailing" constant="15" id="AhY-Rb-rP6"/>
                         <constraint firstItem="yjk-F9-TBz" firstAttribute="top" secondItem="2tc-Wp-MAR" secondAttribute="top" constant="40" id="Akr-XK-fhp"/>
                         <constraint firstItem="U8b-p8-E49" firstAttribute="leading" secondItem="MWw-60-Qbb" secondAttribute="leading" id="N18-7C-bM6"/>
                         <constraint firstItem="yjk-F9-TBz" firstAttribute="leading" secondItem="2tc-Wp-MAR" secondAttribute="leading" constant="15" id="W4s-85-Qhv"/>
                         <constraint firstItem="U77-oF-bXs" firstAttribute="top" secondItem="yjk-F9-TBz" secondAttribute="bottom" constant="15" id="dov-TP-yNe"/>
-                        <constraint firstItem="U77-oF-bXs" firstAttribute="leading" secondItem="yjk-F9-TBz" secondAttribute="leading" id="luu-T8-yyx"/>
+                        <constraint firstItem="U77-oF-bXs" firstAttribute="leading" secondItem="yjk-F9-TBz" secondAttribute="leading" constant="20" id="luu-T8-yyx"/>
                         <constraint firstAttribute="trailing" secondItem="Ig7-yF-VBI" secondAttribute="trailing" id="n86-iY-aYL"/>
                         <constraint firstItem="U8b-p8-E49" firstAttribute="top" secondItem="MWw-60-Qbb" secondAttribute="bottom" constant="10" id="omN-5r-N6U"/>
                         <constraint firstItem="Ig7-yF-VBI" firstAttribute="centerY" secondItem="yjk-F9-TBz" secondAttribute="centerY" id="vmD-q3-3FI"/>

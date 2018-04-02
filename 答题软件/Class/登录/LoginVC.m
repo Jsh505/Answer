@@ -128,7 +128,7 @@
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(rightBarButtonClicked) title:@"注册"];
     
-    [self.view sd_addSubviews:@[self.passWordTF, self.phoneTF, self.loginButton, self.forgetPassWordButton]];
+    [self.view sd_addSubviews:@[self.passWordTF, self.phoneTF, self.loginButton]];
     
     self.passWordTF.sd_layout
     .centerYEqualToView(self.view)
@@ -171,12 +171,12 @@
     .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
     self.loginButton.sd_cornerRadiusFromHeightRatio = @(0.5);
     
-    self.forgetPassWordButton.sd_layout
-    .centerXEqualToView(self.view)
-    .topSpaceToView(self.loginButton, 0)
-    .widthIs(100)
-    .heightIs(40);
-    self.forgetPassWordButton.sd_cornerRadiusFromHeightRatio = @(0.5);
+//    self.forgetPassWordButton.sd_layout
+//    .centerXEqualToView(self.view)
+//    .topSpaceToView(self.loginButton, 0)
+//    .widthIs(100)
+//    .heightIs(40);
+//    self.forgetPassWordButton.sd_cornerRadiusFromHeightRatio = @(0.5);
 
 }
 

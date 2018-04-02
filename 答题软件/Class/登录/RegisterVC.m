@@ -124,7 +124,7 @@
     UIView * makView = [[UIView alloc] init];
     makView.backgroundColor = [UIColor mainColor];
     
-    [self.view sd_addSubviews:@[self.passWordTF, self.phoneTF, self.codeTF, makView, self.codeButton, self.invitationCodeTF, self.lbl_Content, self.registerButton]];
+    [self.view sd_addSubviews:@[self.passWordTF, self.phoneTF, self.invitationCodeTF, self.lbl_Content, self.registerButton]];
     
     self.passWordTF.sd_layout
     .centerYEqualToView(self.view)
@@ -133,29 +133,29 @@
     .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
     self.passWordTF.sd_cornerRadiusFromHeightRatio = @(0.5);
     
-    self.codeTF.sd_layout
-    .centerXEqualToView(self.view)
-    .bottomSpaceToView(self.passWordTF, 15)
-    .widthIs(SCREEN_WIDTH * 2/3)
-    .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
-    self.codeTF.sd_cornerRadiusFromHeightRatio = @(0.5);
-    
-    self.codeButton.sd_layout
-    .rightEqualToView(self.codeTF)
-    .topEqualToView(self.codeTF)
-    .widthIs(SCREEN_WIDTH * 2/3 * 130 / 400)
-    .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
-    self.codeButton.sd_cornerRadiusFromHeightRatio = @(0.5);
-    
-    makView.sd_layout
-    .leftEqualToView(self.codeButton)
-    .topEqualToView(self.codeTF)
-    .widthIs(SCREEN_WIDTH * 2/3 * 130 / 400 - 40)
-    .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
+//    self.codeTF.sd_layout
+//    .centerXEqualToView(self.view)
+//    .bottomSpaceToView(self.passWordTF, 15)
+//    .widthIs(SCREEN_WIDTH * 2/3)
+//    .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
+//    self.codeTF.sd_cornerRadiusFromHeightRatio = @(0.5);
+//
+//    self.codeButton.sd_layout
+//    .rightEqualToView(self.codeTF)
+//    .topEqualToView(self.codeTF)
+//    .widthIs(SCREEN_WIDTH * 2/3 * 130 / 400)
+//    .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
+//    self.codeButton.sd_cornerRadiusFromHeightRatio = @(0.5);
+//
+//    makView.sd_layout
+//    .leftEqualToView(self.codeButton)
+//    .topEqualToView(self.codeTF)
+//    .widthIs(SCREEN_WIDTH * 2/3 * 130 / 400 - 40)
+//    .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
     
     self.phoneTF.sd_layout
     .centerXEqualToView(self.view)
-    .bottomSpaceToView(self.codeTF, 15)
+    .bottomSpaceToView(self.passWordTF, 15)
     .widthIs(SCREEN_WIDTH * 2/3)
     .heightIs(SCREEN_WIDTH * 2/3 * 65/400);
     self.phoneTF.sd_cornerRadiusFromHeightRatio = @(0.5);
@@ -274,7 +274,7 @@
     {
         _lbl_Content = [[EBTAttributeLinkClickLabel alloc] initWithFrame:CGRectZero];
         _lbl_Content.font = [UIFont systemFontOfSize:13];
-        NSString *text = @"     我已阅读并同意得分王用户协议";
+        NSString *text = @"     注册即已阅读并同意得分王用户协议";
         __weak typeof(self)weakSelf = self;
         [_lbl_Content attributeLinkLabelText:text withLinksAttribute:@{NSUnderlineStyleAttributeName:@(NSUnderlineStyleNone),
                                                                        NSForegroundColorAttributeName:[UIColor mainColor]}
@@ -282,7 +282,7 @@
          {
              __strong typeof(weakSelf)strongSelf = weakSelf;
              
-         } withUnderLineTextString:@"得分王用户协议",nil];
+         } withUnderLineTextString:@"",nil];
     }
     return _lbl_Content;
 }

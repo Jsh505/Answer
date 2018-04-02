@@ -36,4 +36,13 @@
 @property (nonatomic, copy) NSString * answer_E;
 @property (nonatomic, copy) NSString * answer_F;
 
+
+@property (nonatomic, copy) NSString * id;
+@property (nonatomic, copy) NSString * user_answer;
+
+
+
+
+
+
 @end

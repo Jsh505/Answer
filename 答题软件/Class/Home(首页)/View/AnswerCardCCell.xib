@@ -25,7 +25,7 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="JJY-vf-Pfg" secondAttribute="height" id="EMh-Ef-2dw"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

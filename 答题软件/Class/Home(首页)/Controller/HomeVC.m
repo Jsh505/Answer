@@ -21,6 +21,7 @@
 #import "WrongExerciseVC.h"
 #import "FL_Button.h"
 #import "HomeTitleViewCell.h"
+#import "LookMoreVC.h"
 
 //二级列表
 #import "ChapterExercisesCellModel.h"
@@ -271,6 +272,13 @@
     }
 }
 
+- (void)headerViewSingleTap
+{
+    //查看更多
+    LookMoreVC * vc = [[LookMoreVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - IBActions(xib响应方法)
 
 - (void)lianxiBUttonCilick
@@ -481,6 +489,10 @@
         
         HomeTableViewHeaderView * view = [HomeTableViewHeaderView loadViewFromXIB];
         view.frame = CGRectMake(0, SCREEN_WIDTH * 320 / 375 - 1, SCREEN_WIDTH, 44);
+        UITapGestureRecognizer * singleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headerViewSingleTap)];
+        singleRecognizer.numberOfTapsRequired = 1; // 单击
+        [view addGestureRecognizer:singleRecognizer];
+        
         [_headerView addSubview:view];
     }
     return _headerView;

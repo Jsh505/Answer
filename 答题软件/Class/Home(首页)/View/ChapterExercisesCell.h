@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ChapterExercisesCellModel.h"
+#import "QuestionsInfoModel.h"
+#import "SWRevealTableViewCell.h"
 
-@interface ChapterExercisesCell : UITableViewCell
+@interface ChapterExercisesCell : SWRevealTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLB;
 @property (weak, nonatomic) IBOutlet UILabel *personNumLB;
 
-@property (nonatomic, strong) ChapterExercisesCellModel * model;
+@property (nonatomic, strong) QuestionsInfoModel * model;
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecordModel.h"
 
 @interface TestResultVC : UIViewController
+
+@property (nonatomic, strong) RecordModel * recordModel;
 
 @end

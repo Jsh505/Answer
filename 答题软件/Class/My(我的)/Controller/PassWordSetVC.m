@@ -10,7 +10,6 @@
 
 @interface PassWordSetVC ()
 
-@property (weak, nonatomic) IBOutlet UITextField *oldPassWordTF;
 @property (weak, nonatomic) IBOutlet UITextField *nPassWordTF;
 @property (weak, nonatomic) IBOutlet UITextField *rPassWordTF;
 
@@ -34,7 +33,28 @@
 
 - (IBAction)commitButtonCilick:(id)sender
 {
-    //提交
+    if ([self.nPassWordTF.text isEqualToString:self.rPassWordTF.text] && self.nPassWordTF.text.length != 0)
+    {
+        //提交
+        NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+        [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
+        [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
+        [parametersDic setObject:self.nPassWordTF.text forKey:@"password"];
+        
+        [PPNetworkHelper POST:@"/user/replacement/" parameters:parametersDic hudString:@"登录中..." success:^(id responseObject)
+         {
+             [MBProgressHUD showInfoMessage:@"找回成功"];
+             [self dismissViewControllerAnimated:YES completion:nil];
+             
+         } failure:^(NSString *error)
+         {
+             [MBProgressHUD showErrorMessage:error];
+         }];
+    }
+   else
+   {
+       [MBProgressHUD showInfoMessage:@"请确认密码是否一致"];
+   }
 }
 
 #pragma mark - Public (.h 公共调用方法)

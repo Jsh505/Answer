@@ -7,11 +7,14 @@
 //
 
 #import "CoustromViewController.h"
+#import "QuestionsInfoModel.h"
 
 @interface ExaminationInfoVC : CoustromViewController
 
 @property (nonatomic, copy) NSString * type;
 @property (nonatomic, copy) NSString * unit;
 @property (nonatomic, copy) NSString * section;
+
+@property (nonatomic, strong) QuestionsInfoModel * model;
 
 @end

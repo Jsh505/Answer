@@ -16,10 +16,11 @@
 #import <SDWebImageManager.h>
 #import "AnswerFooterView.h"
 
-@interface AnswerVC () <ErrorCorrectionViewDelegate>
+@interface AnswerVC ()
 {
     int _index;  //当前题目
     BOOL _isShowAnswer;  //是否显示答案
+    BOOL _isCllocet;  //是否收藏
     CGFloat _footerHight;
 }
 
@@ -67,6 +68,8 @@
     [self.view addGestureRecognizer:self.leftSwipeGestureRecognizer];
     [self.view addGestureRecognizer:self.rightSwipeGestureRecognizer];
     
+    [self searchCollectStatus];
+    
 }
 
 - (void)loadData
@@ -94,36 +97,80 @@
     _footerHight = 70 + expectSize.height;
 }
 
-#pragma mark - Custom Accessors (控件响应方法)
-
-- (void)Collection
+- (void)searchCollectStatus
 {
-    //收藏
+    //查询收藏状态
     NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
     [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
     [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
     [parametersDic setObject:self.questionsModel.questions_id forKey:@"question_id"];
     
-    [PPNetworkHelper POST:@"/user/collect_submit/" parameters:parametersDic hudString:nil success:^(id responseObject)
+    [PPNetworkHelper POST:@"/exam/collect_info/" parameters:parametersDic hudString:nil success:^(id responseObject)
      {
-        self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"已收藏" highImage:@"已收藏"];
-    } failure:^(NSString *error)
+         if (responseObject)
+         {
+             self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"已收藏" highImage:@"已收藏"];
+             _isCllocet = YES;
+         }
+         else
+         {
+             _isCllocet = NO;
+             self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"收藏" highImage:@"收藏"];
+         }
+     } failure:^(NSString *error)
      {
-         [MBProgressHUD showErrorMessage:error];
+         _isCllocet = NO;
+         self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"收藏" highImage:@"收藏"];
      }];
+}
+
+#pragma mark - Custom Accessors (控件响应方法)
+
+- (void)Collection
+{
+    NSMutableDictionary * parametersDic = [[NSMutableDictionary alloc] init];
+    [parametersDic setObject:[UserSignData share].user.phone forKey:@"phone"];
+    [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
+    [parametersDic setObject:self.questionsModel.questions_id forKey:@"question_id"];
+    if (_isCllocet)
+    {
+        //取消收藏
+        [PPNetworkHelper POST:@"/exam/collect_off/" parameters:parametersDic hudString:nil success:^(id responseObject)
+         {
+             self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"收藏" highImage:@"收藏"];
+             _isCllocet = NO;
+         } failure:^(NSString *error)
+         {
+             [MBProgressHUD showErrorMessage:error];
+         }];
+    }
+    else
+    {
+        //收藏
+        [PPNetworkHelper POST:@"/exam/collect_submit/" parameters:parametersDic hudString:nil success:^(id responseObject)
+         {
+             self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"已收藏" highImage:@"已收藏"];
+             _isCllocet = YES;
+         } failure:^(NSString *error)
+         {
+             [MBProgressHUD showErrorMessage:error];
+         }];
+    }
 }
 
 - (void)handleSwipes:(UISwipeGestureRecognizer *)sender
 {
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
     {
-        if (_index < self.model.questions.count)
+        if (_index < self.model.questions.count - 1)
         {
             _index ++;
+            _isShowAnswer = NO;
             [self loadData];
             [self.coustromTableView reloadData];
             [MBProgressHUD showInfoMessage:@"下一题"];
             [self.coustromTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            [self searchCollectStatus];
         }
         else
         {
@@ -137,9 +184,11 @@
         {
             _index --;
             [self loadData];
+            _isShowAnswer = NO;
             [self.coustromTableView reloadData];
             [MBProgressHUD showInfoMessage:@"上一题"];
             [self.coustromTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            [self searchCollectStatus];
         }
         else
         {
@@ -203,7 +252,11 @@
             answerArr = [answerArr stringByAppendingString:[NSString stringWithFormat:@",%@",[self.answerDic objectForKey:[NSString stringWithFormat:@"%d",i + 1]]]];
         }
     }
-    view.yourAnswerLB.text = [answerArr substringFromIndex:1];
+    if (answerArr.length > 0)
+    {
+        answerArr = [answerArr substringFromIndex:1];
+    }
+    view.yourAnswerLB.text = answerArr;
     view.frame = CGRectMake(0, 0, SCREEN_WIDTH, _footerHight);
     
     if (![answerArr isEqualToString:self.questionsModel.answer])
@@ -214,9 +267,8 @@
         [parametersDic setObject:[UserSignData share].user.token forKey:@"token"];
         [parametersDic setObject:self.questionsModel.questions_id forKey:@"question_id"];
         
-        [PPNetworkHelper POST:@"/user/wrong_submit/" parameters:parametersDic hudString:nil success:^(id responseObject)
+        [PPNetworkHelper POST:@"/exam/wrong_submit/" parameters:parametersDic hudString:nil success:^(id responseObject)
          {
-             self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"已收藏" highImage:@"已收藏"];
          } failure:^(NSString *error)
          {
          }];
@@ -294,6 +346,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         cell.model = self.questionsModel;
+        cell.questionNum.text = [NSString stringWithFormat:@"%d",_index + 1];
         cell.numLB.text = [NSString stringWithFormat:@"/%ld",self.model.questions.count];
         return cell;
     }
@@ -348,7 +401,7 @@
 
 - (void)confirmCell:(AnswerImageCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    QuestionsModel * model = self.model.questions[indexPath.row];
+    QuestionsModel * model = self.model.questions[indexPath.row - 1];
     NSString *imgUrl = model.questions_img;
     UIImage *cachedImg = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imgUrl];
     if (!cachedImg)

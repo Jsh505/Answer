@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1B4040B245FEBFBCCE689095 /* libPods-答题软件.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB512F165ED0417F59CB2 /* libPods-答题软件.a */; };
+		A80D914B205A08AD00D4A577 /* SWRevealTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D9149205A08AD00D4A577 /* SWRevealTableViewCell.m */; };
+		A80D914E205A133400D4A577 /* RecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D914D205A133400D4A577 /* RecordModel.m */; };
+		A80D9151205A1B8D00D4A577 /* TestResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D9150205A1B8D00D4A577 /* TestResultModel.m */; };
+		A80D9154205A217900D4A577 /* TestResultInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D9153205A217900D4A577 /* TestResultInfoVC.m */; };
 		A83A267E20410FC600D7C90F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A267820410FC600D7C90F /* LoginVC.m */; };
 		A83A267F20410FC600D7C90F /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A83A267920410FC600D7C90F /* RegisterVC.m */; };
 		A83A268020410FC600D7C90F /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83A267B20410FC600D7C90F /* RegisterVC.xib */; };
@@ -95,6 +99,7 @@
 		A8543F522047A89000CB413C /* SearchRuesltVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8543F512047A89000CB413C /* SearchRuesltVC.m */; };
 		A8543F5A2047EB3800CB413C /* QuestionsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8543F592047EB3800CB413C /* QuestionsInfoModel.m */; };
 		A8543F5D2047ED1D00CB413C /* QuestionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8543F5C2047ED1D00CB413C /* QuestionsModel.m */; };
+		A86729A020525449008117A6 /* StartExaminationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A867299F20525449008117A6 /* StartExaminationVC.m */; };
 		A8A27FE420454684009E9CB1 /* ErrorCorrectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A27FE320454684009E9CB1 /* ErrorCorrectionView.m */; };
 		A8A27FE62045468D009E9CB1 /* ErrorCorrectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A27FE52045468D009E9CB1 /* ErrorCorrectionView.xib */; };
 		A8A27FE92046EA5C009E9CB1 /* FL_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A27FE72046EA5C009E9CB1 /* FL_Button.m */; };
@@ -139,12 +144,21 @@
 		A8D2FFAD2048EBE7002F21BD /* AnswerImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D2FFAB2048EBE7002F21BD /* AnswerImageCell.xib */; };
 		A8D2FFB0204951F5002F21BD /* AnswerFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D2FFAF204951F5002F21BD /* AnswerFooterView.m */; };
 		A8D2FFB22049522A002F21BD /* AnswerFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D2FFB12049522A002F21BD /* AnswerFooterView.xib */; };
+		A8D2FFB5204E944A002F21BD /* LookMoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D2FFB4204E944A002F21BD /* LookMoreVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		077BC8D2C9819B0B358F6C5A /* Pods-答题软件.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-答题软件.debug.xcconfig"; path = "Pods/Target Support Files/Pods-答题软件/Pods-答题软件.debug.xcconfig"; sourceTree = "<group>"; };
 		1B1DB512F165ED0417F59CB2 /* libPods-答题软件.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-答题软件.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAA3347DC2FDCF82F10E762 /* Pods-答题软件.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-答题软件.release.xcconfig"; path = "Pods/Target Support Files/Pods-答题软件/Pods-答题软件.release.xcconfig"; sourceTree = "<group>"; };
+		A80D9149205A08AD00D4A577 /* SWRevealTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealTableViewCell.m; sourceTree = "<group>"; };
+		A80D914A205A08AD00D4A577 /* SWRevealTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealTableViewCell.h; sourceTree = "<group>"; };
+		A80D914C205A133400D4A577 /* RecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordModel.h; sourceTree = "<group>"; };
+		A80D914D205A133400D4A577 /* RecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordModel.m; sourceTree = "<group>"; };
+		A80D914F205A1B8D00D4A577 /* TestResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestResultModel.h; sourceTree = "<group>"; };
+		A80D9150205A1B8D00D4A577 /* TestResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestResultModel.m; sourceTree = "<group>"; };
+		A80D9152205A217900D4A577 /* TestResultInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestResultInfoVC.h; sourceTree = "<group>"; };
+		A80D9153205A217900D4A577 /* TestResultInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestResultInfoVC.m; sourceTree = "<group>"; };
 		A83A267820410FC600D7C90F /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		A83A267920410FC600D7C90F /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		A83A267A20410FC600D7C90F /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -299,6 +313,8 @@
 		A8543F592047EB3800CB413C /* QuestionsInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionsInfoModel.m; sourceTree = "<group>"; };
 		A8543F5B2047ED1D00CB413C /* QuestionsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionsModel.h; sourceTree = "<group>"; };
 		A8543F5C2047ED1D00CB413C /* QuestionsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionsModel.m; sourceTree = "<group>"; };
+		A867299E20525449008117A6 /* StartExaminationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartExaminationVC.h; sourceTree = "<group>"; };
+		A867299F20525449008117A6 /* StartExaminationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartExaminationVC.m; sourceTree = "<group>"; };
 		A8A27FE220454684009E9CB1 /* ErrorCorrectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorCorrectionView.h; sourceTree = "<group>"; };
 		A8A27FE320454684009E9CB1 /* ErrorCorrectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorCorrectionView.m; sourceTree = "<group>"; };
 		A8A27FE52045468D009E9CB1 /* ErrorCorrectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCorrectionView.xib; sourceTree = "<group>"; };
@@ -368,6 +384,8 @@
 		A8D2FFAE204951F5002F21BD /* AnswerFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerFooterView.h; sourceTree = "<group>"; };
 		A8D2FFAF204951F5002F21BD /* AnswerFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerFooterView.m; sourceTree = "<group>"; };
 		A8D2FFB12049522A002F21BD /* AnswerFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerFooterView.xib; sourceTree = "<group>"; };
+		A8D2FFB3204E944A002F21BD /* LookMoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookMoreVC.h; sourceTree = "<group>"; };
+		A8D2FFB4204E944A002F21BD /* LookMoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookMoreVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +400,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80D9148205A08AD00D4A577 /* SWRevealTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A80D9149205A08AD00D4A577 /* SWRevealTableViewCell.m */,
+				A80D914A205A08AD00D4A577 /* SWRevealTableViewCell.h */,
+			);
+			path = SWRevealTableViewCell;
+			sourceTree = "<group>";
+		};
 		A83A267720410FC600D7C90F /* 登录 */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +502,8 @@
 			children = (
 				A850E08B2032C85E00AE46A1 /* HomeVC.h */,
 				A850E08C2032C85E00AE46A1 /* HomeVC.m */,
+				A8D2FFB3204E944A002F21BD /* LookMoreVC.h */,
+				A8D2FFB4204E944A002F21BD /* LookMoreVC.m */,
 				A8543F502047A89000CB413C /* SearchRuesltVC.h */,
 				A8543F512047A89000CB413C /* SearchRuesltVC.m */,
 				A8CAEFDC2042B0F300229B24 /* ChapterExercisesVC.h */,
@@ -494,9 +523,6 @@
 				A8CAEFD22042A79E00229B24 /* AnswerCardVC.h */,
 				A8CAEFD32042A79E00229B24 /* AnswerCardVC.m */,
 				A8CAEFD42042A79E00229B24 /* AnswerCardVC.xib */,
-				A8CAF0012045305400229B24 /* TestResultVC.h */,
-				A8CAF0022045305400229B24 /* TestResultVC.m */,
-				A8CAF0032045305400229B24 /* TestResultVC.xib */,
 				A8CAF00620453AE500229B24 /* RankingListVC.h */,
 				A8CAF00720453AE500229B24 /* RankingListVC.m */,
 			);
@@ -594,6 +620,11 @@
 			children = (
 				A850E0932032C8D100AE46A1 /* RecordVC.h */,
 				A850E0942032C8D100AE46A1 /* RecordVC.m */,
+				A8CAF0012045305400229B24 /* TestResultVC.h */,
+				A8CAF0022045305400229B24 /* TestResultVC.m */,
+				A8CAF0032045305400229B24 /* TestResultVC.xib */,
+				A80D9152205A217900D4A577 /* TestResultInfoVC.h */,
+				A80D9153205A217900D4A577 /* TestResultInfoVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -601,6 +632,10 @@
 		A850E0232032BE6600AE46A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A80D914C205A133400D4A577 /* RecordModel.h */,
+				A80D914D205A133400D4A577 /* RecordModel.m */,
+				A80D914F205A1B8D00D4A577 /* TestResultModel.h */,
+				A80D9150205A1B8D00D4A577 /* TestResultModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -631,6 +666,8 @@
 				A850E08E2032C8AE00AE46A1 /* ExaminationVC.h */,
 				A850E08F2032C8AE00AE46A1 /* ExaminationVC.m */,
 				A850E0902032C8AE00AE46A1 /* ExaminationVC.xib */,
+				A867299E20525449008117A6 /* StartExaminationVC.h */,
+				A867299F20525449008117A6 /* StartExaminationVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -808,6 +845,7 @@
 		A850E0322032C18200AE46A1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A80D9148205A08AD00D4A577 /* SWRevealTableViewCell */,
 				A8A27FE82046EA5C009E9CB1 /* FL_Button.h */,
 				A8A27FE72046EA5C009E9CB1 /* FL_Button.m */,
 				A83A2682204111BF00D7C90F /* EBTAttributeLinkClickLabel */,
@@ -1043,9 +1081,11 @@
 				A850E0A82032D31A00AE46A1 /* HomeTableViewCell.m in Sources */,
 				A850E0612032C19700AE46A1 /* NSDictionary+Tool.m in Sources */,
 				A8CAEFE42042B20300229B24 /* ChapterExercisesSectionModel.m in Sources */,
+				A8D2FFB5204E944A002F21BD /* LookMoreVC.m in Sources */,
 				A850E0EC2040156C00AE46A1 /* UserSetVC.m in Sources */,
 				A850E0DB2035967C00AE46A1 /* OverTheYearsVC.m in Sources */,
 				A850E05F2032C19700AE46A1 /* UIViewController+Tool.m in Sources */,
+				A86729A020525449008117A6 /* StartExaminationVC.m in Sources */,
 				A83A2685204111BF00D7C90F /* EBTAttributeLinkClickLabel.m in Sources */,
 				A850E0BF2035906A00AE46A1 /* PersonalInformationTVC.m in Sources */,
 				A850E0812032C46000AE46A1 /* UserInfoModel.m in Sources */,
@@ -1072,6 +1112,7 @@
 				A8CAEFD02042A5A000229B24 /* AnswerOptionCell.m in Sources */,
 				A850E0D22035924900AE46A1 /* LZCityPickerController.m in Sources */,
 				A850E0632032C19700AE46A1 /* UIButton+countDown.m in Sources */,
+				A80D914E205A133400D4A577 /* RecordModel.m in Sources */,
 				A850E00B2032BCD400AE46A1 /* ViewController.m in Sources */,
 				A850E0712032C2F900AE46A1 /* UIBarButtonItem+Extension.m in Sources */,
 				A850E0892032C46C00AE46A1 /* PPNetworkHelper.m in Sources */,
@@ -1087,6 +1128,7 @@
 				A850E0DE203FFDD600AE46A1 /* MessageVC.m in Sources */,
 				A8A27FE420454684009E9CB1 /* ErrorCorrectionView.m in Sources */,
 				A83A268F204145CF00D7C90F /* SetVC.m in Sources */,
+				A80D9151205A1B8D00D4A577 /* TestResultModel.m in Sources */,
 				A850E0162032BCD400AE46A1 /* main.m in Sources */,
 				A850E0082032BCD400AE46A1 /* AppDelegate.m in Sources */,
 				A850E0C52035922900AE46A1 /* VPImageCropperViewController.m in Sources */,
@@ -1099,6 +1141,7 @@
 				A83A267F20410FC600D7C90F /* RegisterVC.m in Sources */,
 				A850E0622032C19700AE46A1 /* UIView+Tool.m in Sources */,
 				A850E0F6204018D200AE46A1 /* AboutVC.m in Sources */,
+				A80D914B205A08AD00D4A577 /* SWRevealTableViewCell.m in Sources */,
 				A8CAEFDE2042B0F300229B24 /* ChapterExercisesVC.m in Sources */,
 				A850E05E2032C19700AE46A1 /* UIButton+TouchOne.m in Sources */,
 				A850E0662032C19700AE46A1 /* UIButton+SDSetImage.m in Sources */,
@@ -1114,6 +1157,7 @@
 				A850E0F1204017BA00AE46A1 /* PassWordSetVC.m in Sources */,
 				A850E0782032C45300AE46A1 /* MBProgressHUD+JDragon.m in Sources */,
 				A8543F5A2047EB3800CB413C /* QuestionsInfoModel.m in Sources */,
+				A80D9154205A217900D4A577 /* TestResultInfoVC.m in Sources */,
 				A8CAEFE12042B19400229B24 /* ChapterExercisesCellModel.m in Sources */,
 				A850E0E7204001A200AE46A1 /* ChangeNameVC.m in Sources */,
 				A850E0592032C19700AE46A1 /* UIColor+Tool.m in Sources */,

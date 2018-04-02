@@ -127,7 +127,7 @@ static NetworkStatus _status;
             [MBProgressHUD hideHUD];
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        if ([[responseObject objectForKey:@"error"] intValue] == 1)
+        if ([[responseObject objectForKey:@"code"] intValue] == 200)
         {
             success([responseObject objectForKey:@"data"]);
             PPLog(@"responseObject = %@",responseObject);
@@ -177,7 +177,7 @@ static NetworkStatus _status;
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        if ([[responseObject objectForKey:@"error"] intValue] == 1)
+        if ([[responseObject objectForKey:@"code"] intValue] == 200)
         {
             success([responseObject objectForKey:@"data"]);
             [PPNetworkCache saveResponseCache:[responseObject objectForKey:@"data"] forKey:URL];
@@ -227,7 +227,7 @@ static NetworkStatus _status;
 
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
-        if ([[responseObject objectForKey:@"error"] intValue] == 1)
+        if ([[responseObject objectForKey:@"code"] intValue] == 200)
         {
             success([responseObject objectForKey:@"data"]);
             PPLog(@"responseObject = %@",responseObject);
@@ -428,7 +428,7 @@ static NetworkStatus _status;
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
-        if ([[responseObject objectForKey:@"error"] intValue] == 1)
+        if ([[responseObject objectForKey:@"code"] intValue] == 200)
         {
             success([responseObject objectForKey:@"data"]);
             PPLog(@"responseObject = %@",responseObject);

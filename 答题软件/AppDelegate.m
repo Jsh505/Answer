@@ -32,8 +32,6 @@
     
     [self goLogin];
     
-    
-    
     //键盘处理
     [self configureBoardManager];
     

@@ -21,4 +21,11 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(RecordModel *)model
+{
+    _model = model;
+    self.titleLB.text = model.unit;
+    self.userNumLB.text = model.user_score;
+    self.fullNumLB.text = [NSString stringWithFormat:@"/%@",model.unit_full];
+}
 @end

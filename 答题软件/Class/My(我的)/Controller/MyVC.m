@@ -160,7 +160,7 @@
     if (!_headerView)
     {
         _headerView = [MyTableHeaderView loadViewFromXIB];
-        _headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH * 250 / 375);
+        _headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH * 280 / 375);
         [_headerView.messageButton addTarget:self action:@selector(messageButtonCilick) forControlEvents:UIControlEventTouchUpInside];
         [_headerView.zhangjielianxiBUtton addTarget:self action:@selector(zhangjielianxiBUttonCilick) forControlEvents:UIControlEventTouchUpInside];
         [_headerView.myshoucangButton addTarget:self action:@selector(myshoucangButtonCilick) forControlEvents:UIControlEventTouchUpInside];

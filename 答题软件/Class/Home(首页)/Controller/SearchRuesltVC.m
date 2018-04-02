@@ -191,7 +191,7 @@
     ExaminationInfoVC * vc = [[ExaminationInfoVC alloc] init];
     ChapterExercisesSectionModel *sectionModel = self.dataSource[indexPath.section];
     ChapterExercisesCellModel * cellModel = sectionModel.section[indexPath.row];
-    vc.type = cellModel.typeKey;
+    vc.type = sectionModel.group_type;
     vc.unit = sectionModel.unit;
     vc.section = cellModel.section;
     [self.navigationController pushViewController:vc animated:YES];

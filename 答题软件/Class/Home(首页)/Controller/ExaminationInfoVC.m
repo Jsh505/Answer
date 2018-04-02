@@ -11,12 +11,9 @@
 #import "ExaminationInfoCell.h"
 #import "ExaminationOtherCell.h"
 #import "AnswerVC.h"
-#import "QuestionsInfoModel.h"
 #import "QuestionsModel.h"
 
 @interface ExaminationInfoVC ()
-
-@property (nonatomic, strong) QuestionsInfoModel * model;
 
 @end
 
@@ -34,7 +31,10 @@
     
     [self.view addSubview:self.coustromTableView];
     
-    [self loadData];
+    if (!self.model)
+    {
+        [self loadData];
+    }
 }
 
 - (void)loadData
@@ -86,7 +86,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,11 +135,6 @@
             case 4:
             {
                 cell.titleLB.text = @"试卷介绍";
-                break;
-            }
-            case 5:
-            {
-                cell.titleLB.text = @"题型介绍";
                 cell.infoLB.text = self.model.section_info;
                 break;
             }

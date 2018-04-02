@@ -26,8 +26,8 @@
     _model = model;
     
     self.typeTitleLB.text = model.questions_type;
-    self.questionNum.text = model.questions_id;
-    self.infoLB.text = model.questions;
+//    self.questionNum.text = model.questions_id;
+    self.infoLB.text = [NSString stringWithFormat:@"%@号题目:\n%@",model.questions_id,model.questions];
 }
 
 @end

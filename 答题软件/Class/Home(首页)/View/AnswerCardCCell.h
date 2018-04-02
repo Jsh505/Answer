@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuestionsModel.h"
 
 @interface AnswerCardCCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLB;
+
+@property (nonatomic, assign) NSInteger indexRow;
+@property (nonatomic, strong) QuestionsModel * model;
 
 @end

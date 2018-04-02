@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetVC">
             <connections>
+                <outlet property="sizeLb" destination="wbE-7t-Fq3" id="eP5-mV-Rkd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,11 +36,19 @@
                                 <action selector="cleanButtonCilick:" destination="-1" eventType="touchUpInside" id="yHE-5N-AoL"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00MB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-7t-Fq3">
+                            <rect key="frame" x="307" y="16" width="53" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="8Dw-6W-1bV"/>
                         <constraint firstItem="OWC-2N-yJv" firstAttribute="centerY" secondItem="yWk-Qp-kNG" secondAttribute="centerY" id="9Lg-1F-fTo"/>
+                        <constraint firstAttribute="trailing" secondItem="wbE-7t-Fq3" secondAttribute="trailing" constant="15" id="Uhe-mO-RNi"/>
+                        <constraint firstItem="wbE-7t-Fq3" firstAttribute="centerY" secondItem="OWC-2N-yJv" secondAttribute="centerY" id="WJO-Gi-Qhz"/>
                         <constraint firstItem="OWC-2N-yJv" firstAttribute="width" secondItem="yWk-Qp-kNG" secondAttribute="width" id="Ye3-ZP-1xm"/>
                         <constraint firstItem="FZ8-Hg-PQN" firstAttribute="leading" secondItem="yWk-Qp-kNG" secondAttribute="leading" constant="15" id="a7q-or-arz"/>
                         <constraint firstItem="OWC-2N-yJv" firstAttribute="centerX" secondItem="yWk-Qp-kNG" secondAttribute="centerX" id="cT0-5P-PEN"/>
