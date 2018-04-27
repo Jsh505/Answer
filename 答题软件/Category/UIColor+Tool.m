@@ -25,12 +25,12 @@
     return [UIColor colorWithHexString:@"F4F5F6"];
 }
 
-+ (instancetype)titleColor;
++ (instancetype)mainTextColor;
 {
     return [self colorWithHexString:@"1f1f1f"];
 }
 
-+ (instancetype)otherTitleColor;
++ (instancetype)otherTextColor;
 {
     return [UIColor colorWithHexString:@"3f3f3f"];
 }

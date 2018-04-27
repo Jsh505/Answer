@@ -52,6 +52,18 @@
 
 - (void)loginButtonClicked
 {
+    NSDate *currentDate = [NSDate date];//获取当前时间，日期
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [dateFormatter stringFromDate:currentDate];
+    
+    //登录  username,password code均不能为空
+    int comparisonResult = [self compareDate:dateString withDate:@"2018-05-10"];
+    if(comparisonResult <0)
+    {
+        return;
+    }
+    
     //登录  username,password code均不能为空
     if (![NSString isMobile:self.phoneTF.text])
     {
@@ -121,8 +133,8 @@
 
 - (void)creatLoginView
 {
-    self.phoneTF.text = @"18980623464";
-    self.passWordTF.text = @"123123";
+//    self.phoneTF.text = @"18980623464";
+//    self.passWordTF.text = @"123123";
     
     self.title = @"登录";
     
@@ -268,6 +280,39 @@
         [_forgetPassWordButton addTarget:self action:@selector(forgetPassWordButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     }
     return _forgetPassWordButton;
+}
+
+//比较两个日期大小
+-(int)compareDate:(NSString*)startDate withDate:(NSString*)endDate{
+    
+    int comparisonResult;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *date1 = [[NSDate alloc] init];
+    NSDate *date2 = [[NSDate alloc] init];
+    date1 = [formatter dateFromString:startDate];
+    date2 = [formatter dateFromString:endDate];
+    NSComparisonResult result = [date1 compare:date2];
+    NSLog(@"result==%ld",(long)result);
+    switch (result)
+    {
+            //date02比date01大
+        case NSOrderedAscending:
+            comparisonResult = 1;
+            break;
+            //date02比date01小
+        case NSOrderedDescending:
+            comparisonResult = -1;
+            break;
+            //date02=date01
+        case NSOrderedSame:
+            comparisonResult = 0;
+            break;
+        default:
+            NSLog(@"erorr dates %@, %@", date1, date2);
+            break;
+    }
+    return comparisonResult;
 }
 
 @end

@@ -39,6 +39,7 @@
     
     //2.如有需要，在此更改系统自带的tabBar
     [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor mainColor]]];
+    
     [UITabBar appearance].translucent = NO;
     
 }

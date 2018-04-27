@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *countDownFormat;
 
+//验证码倒计时
 -(void)countDownWithTimeInterval:(NSTimeInterval) duration;
 
 @end

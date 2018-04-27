@@ -15,18 +15,23 @@
  */
 + (instancetype)mainColor;
 /**
- *  背景浅灰色
+ *  背景色
  */
 + (instancetype)backgroudColor;
-
-/// 分割线颜色
+/**
+ *  线条颜色
+ */
 + (instancetype)lineColor;
+/**
+ *  字体主颜色
+ */
++ (instancetype)mainTextColor;
+/**
+ *  副字体颜色
+ */
++ (instancetype)otherTextColor;
 
-+ (instancetype)titleColor;
 
-+ (instancetype)otherTitleColor;
-
-//
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 
 @end

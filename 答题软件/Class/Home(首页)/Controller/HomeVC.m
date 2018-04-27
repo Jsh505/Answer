@@ -506,7 +506,7 @@
         _cycleScrollView.showPageControl = NO;
         _cycleScrollView.onlyDisplayText = NO;
         _cycleScrollView.titleLabelBackgroundColor = [UIColor clearColor];
-        _cycleScrollView.titleLabelTextColor = [UIColor titleColor];
+        _cycleScrollView.titleLabelTextColor = [UIColor mainTextColor];
         //加载网络视图
         //    cycleScrollView2.imageURLStringsGroup = imagesURLStrings;
     }
@@ -523,7 +523,7 @@
 //        _cycleScrollTextView.titlesGroup = @[@"1111",@"2222",@"3333"];
         _cycleScrollTextView.onlyDisplayText = YES;
         _cycleScrollTextView.titleLabelBackgroundColor = [UIColor whiteColor];
-        _cycleScrollTextView.titleLabelTextColor = [UIColor titleColor];
+        _cycleScrollTextView.titleLabelTextColor = [UIColor mainTextColor];
         //加载网络视图
         //    cycleScrollView2.imageURLStringsGroup = imagesURLStrings;
     }

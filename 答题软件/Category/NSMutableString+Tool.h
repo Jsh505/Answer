@@ -34,7 +34,6 @@
                                             suffixColor:(UIColor *)suffixColor;
 
 // string在前 图片在后
-
 + (NSMutableAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
                                               subffixImageName:(NSString *)subffixImageName;
 

@@ -14,7 +14,7 @@
 + (UIImage *)imageFromURLString:(NSString *)urlstring;
 
 //由颜色生成图片
-+ (UIImage *) imageWithColor:(UIColor*)color;
++ (UIImage *)imageWithColor:(UIColor*)color;
 
 //将图片剪裁至目标尺寸
 + (UIImage *) imageByScalingAndCroppingForSourceImage:(UIImage *)sourceImage targetSize:(CGSize)targetSize;

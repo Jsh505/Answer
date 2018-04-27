@@ -42,7 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"开始答题";
+    self.title = @"左右滑动切换题目";
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(Collection) image:@"收藏" highImage:@"收藏"];
     
